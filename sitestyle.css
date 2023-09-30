@@ -1,0 +1,127 @@
+/* General */
+
+body {
+    background-color: #66A1D2;
+    margin: 0;
+    
+    font-family: "Segoe UI", Verdana, sans-serif;
+    color: white;
+}
+
+header, footer {
+    background-color: #3F8FD2;
+    width: 100%;
+    text-align: center;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 35px 35px auto;
+    column-gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    padding: 10px 0;
+}
+
+main {
+    margin-left: 3%;
+    margin-bottom: 3%;
+
+    max-width: 50ch;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    text-shadow: 3px 1px darkblue;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+@media screen and (min-device-width: 350px) {
+    h1 {
+        font-size: 32px;
+    }
+}
+
+/* Carousel */
+
+ul.carousel {
+    display: grid;
+    grid-template-columns: 25px 175px 25px;
+    grid-template-rows: 220px;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+    height: 215px;
+    width: 300px;
+
+    padding-left: 0;
+
+    list-style: none;
+
+    background-color: rgb(101, 181, 231);
+    border-radius: 40px;
+    box-shadow: 10px 10px 5px rgb(54, 54, 187);
+
+    text-align: center;
+}
+
+.images {
+    width: 175px;
+}
+
+ul.carousel li {
+    display: inline;
+    vertical-align: middle;
+}
+
+/* Buttons */
+
+
+button, .language, .my-email {
+    color:white;
+    text-decoration: none;
+    background-color: rgb(54, 100, 199);
+
+    border-radius: 10px;
+    border: 1px solid rgb(24, 85, 170);
+    box-shadow: 2px 1px darkblue;
+    cursor: pointer;
+
+    font-weight: 550
+}
+
+button:disabled, button:hover:disabled {
+    background-color: darkgray;
+    border: 1px solid gray;
+    box-shadow: 2px 1px gray;
+
+    cursor: default;
+}
+
+button:hover, .language:hover, .my-email:hover {
+    background-color: rgb(35, 69, 143);
+    border: 1px solid rgb(8, 31, 62);
+}
+
+.my-email {
+    padding: 0 10px;
+}
+
+/* Images */
+
+img {
+    margin: 0;
+    border: 0;
+}
+
+img.current {
+    width: 150px;
+    border: 5px solid rgb(24, 85, 170);
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Сайт-портфолио Эллы Ксенофонтовой</title>
+        <link rel="stylesheet" href="sitestyle.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <header>
+            <a href="#" class="language">RU</a>
+            <a href="en_version.html" class="language">EN</a>
+            <h1>Сайт Эллы Ксенофонтовой</h1>
+        </header>
+
+        <main>
+        <h2>О себе</h2>
+        <i>Ниже - галерея изображений со мной. Нажимайте на стрелки, чтобы просмотреть другие изображения.</i>
+        <ul class="carousel">
+            <li><button class="arrow" disabled>←</button></li>
+            <div class="images">
+                <img src="img1.jpg" height="200" width="150" title="Я в Большом Театре" class="current" id="1">
+                <img src="img2.jpg" height="200" width="0" hidden id="2">
+                <img src="img3.jpg" height="200" width="0" title="Я однажды пыталась нарисовать автопортрет по этой фотографии" hidden id="3"></li>
+                <img src="img4.jpg" height="200" width="0" hidden id="4">
+                <img src="img5.jpg" height="200" width="0" title="Я очень люблю котиков)))" hidden id="5">
+            </div>
+            <li><button class="arrow">→</button></li>
+        </ul>
+        Меня зовут Элла Ксенофонтова, мне 15 лет, я живу в Москве и собираюсь стать программистом,
+        а именно фронтенд-разработчиком. Помимо HTML/CSS/JS я люблю рисовать, котиков и вкусно поесть.
+        <h2>Навыки</h2>
+        <h3>Hard Skills</h3>
+        <ul>
+            <li>Хорошо знакома с тремя китами веб-разработки: HTML, CSS и JavaScript. Знакома с адаптивной вёрсткой.</li>
+            <li>Знаю React на достаточно глубоком уровне: я имею представление о продвинутых хуках вроде useReducer, useContext и useEffect.</li>
+            <li>Изучала SASS, но у меня было не так много практики, так что я не помню, как на нём писать.</li>
+            <li>Работала с Node.js: создавала приложение на React с помощью create-react-app, устанавливала в такое приложение пакеты.</li>
+            <li>Умею работать с Git.</li> 
+        </ul>
+        <h3>Soft Skills</h3>
+        <ul>
+            <li>Организованна, трудолюбива и целеустремлённа</li> 
+            <li>Обладаю хорошей памятью</li> 
+            <li>Стремлюсь помочь другим</li> 
+            <li>Грамотно пишу как на русском, так и на английском</li> 
+        </ul>
+        <h2>Мои проекты</h2>
+        <h3>1. Викторина обо мне</h3>
+        Простой сайт с десятью вопросами обо мне и выводом результатов после ответа на них. Это первый проект, который я развернула на GitHub Pages.<br>
+        <a href="https://ella-ksenofontova.github.io/test-about-me/">Ссылка на страницу</a> / <a href="https://github.com/Ella-Ksenofontova/test-about-me">Ссылка на репозиторий</a>
+        <h3>2. Цифровой повар</h3>
+        Проект пока в разработке и не выложен на GitHub. Его суть состоит в том, что алгоритм подбирает блюда на основе выбранных пользователем кухонь,
+        категорий и ингредиентов.
+        <h3>3. Сайт о стилях в дизайне интерьеров и архитектуре</h3>
+        Этот сайт написан на React. Пока он не завершён: ещё есть определённые недочёты. <br>
+        <a href="https://ella-ksenofontova.github.io/interior-design-styles/">Ссылка на страницу</a> / <a href="https://github.com/Ella-Ksenofontova/interior-design-styles">Ссылка на репозиторий</a>
+        </main>
+
+        <footer>
+            <a href="mailto:ellaksenofontova@gmail.com" class="my-email">Написать мне</a>
+        </footer>
+
+        <script>
+            let carousel = document.querySelector(".carousel");
+ 
+            function showNthImage(number) {
+                for (let child of carousel.children) {
+                    if (child.classList.contains("images")) {
+                        for (let image of child.children) {
+                            if (image.id == number) {
+                                image.hidden = false;
+                                image.width = "150";
+                                image.classList.add("current");
+                            } else {
+                                image.hidden = true;
+                                image.width = "0";
+                                image.classList.remove("current");
+                            }
+                        }
+                    }
+                }
+            }
+ 
+            function moveLeft() {
+                if (currentImgNumber > 1) {
+                    showNthImage(currentImgNumber - 1);
+                    currentImgNumber --;
+
+                    if (currentImgNumber == 1) {
+                        arrowLeft.disabled = true;
+                    }
+
+                    if (arrowRight.disabled) arrowRight.disabled = false;
+                }
+            }
+ 
+            function moveRight() {
+                if (currentImgNumber < 5) {
+                    showNthImage(currentImgNumber + 1);
+                    currentImgNumber ++;
+
+                    if (currentImgNumber == 5) {
+                        arrowRight.disabled = true;
+                    }
+
+                    if (arrowLeft.disabled) arrowLeft.disabled = false;
+                }
+            }
+ 
+            let currentImgNumber = 1;
+ 
+            let [arrowLeft, arrowRight] = carousel.querySelectorAll(".arrow");
+ 
+            arrowLeft.addEventListener("click", () => moveLeft());
+            arrowRight.addEventListener("click", () => moveRight());
+         </script>
+    </body>
+</html>
