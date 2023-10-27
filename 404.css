@@ -1,0 +1,20 @@
+body {
+    display: grid;
+    grid-template-rows: 70px 200px auto;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    font-family: "Segoe UI", Verdana, sans-serif;
+    color: darkblue;
+    background-color:cornflowerblue;
+}
+
+a {
+    color: rgb(2, 2, 90);
+}
+
+h1 {
+    margin: 0;
+    font-family: "Cooper Black", "Segoe UI", Verdana, sans-serif;
+}
