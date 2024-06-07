@@ -1,127 +1,140 @@
 /* General */
 
 body {
-    background-color: #66A1D2;
     margin: 0;
+    width: 100%;
     
-    font-family: "Segoe UI", Verdana, sans-serif;
-    color: white;
+    font-family: "Noto Sans";
+    font-weight: 300;
 }
 
 header, footer {
-    background-color: #3F8FD2;
-    width: 100%;
-    text-align: center;
+    background-color: #2BA9F0;
+    box-sizing: border-box;
+    color: white;
+}
+
+header a, footer a {
+    color: white;
 }
 
 header {
-    display: grid;
-    grid-template-columns: 35px 35px auto;
-    column-gap: 15px;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+
+    padding-inline: 5px;
+}
+
+.image-container {
+    height: 350px;
+    width: 100%;
+    background-image: url("./header_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 footer {
-    padding: 10px 0;
+    padding: 10px 3%;
 }
 
 main {
+    width: 95%;
     margin-left: 3%;
+    margin-right: 2%;
     margin-bottom: 3%;
-
-    max-width: 50ch;
-}
-
-h1, h2, h3 {
-    font-weight: 600;
-    text-shadow: 3px 1px darkblue;
 }
 
 h1 {
     font-size: 24px;
 }
 
-@media screen and (min-device-width: 350px) {
+h1, h2, h3 {
+    font-family: "Montserrat Alternates";
+    font-weight: 500;
+}
+
+h2, h3 {
+    color: #104C6E;
+}
+
+a {
+    color: #196B99;
+}
+
+@media screen and (min-device-width: 576px) {
     h1 {
         font-size: 32px;
+    }
+
+    .site-name::after {
+        content: '🐈‍⬛ 🖥️ 🎨';
+    }
+
+    header {
+        padding-inline: 30px;
+    }
+}
+
+/* Header */
+.language {
+    margin-left: 7px;
+}
+
+@media screen and (min-device-width: 576px) {
+    .language {
+        transform: translateX(-5px);
     }
 }
 
 /* Carousel */
 
-ul.carousel {
+.gallery-carousel {
     display: grid;
-    grid-template-columns: 25px 175px 25px;
-    grid-template-rows: 220px;
-    column-gap: 20px;
+    grid-template-columns: min(50px, calc((100vw - 195px) / 2 - 3%)) 175px min(50px, calc((100vw - 195px) / 2 - 3%));
     align-items: center;
-    justify-content: center;
+    column-gap: 10px;
+}
 
-    height: 215px;
-    width: 300px;
+#previous, #next {
+    width: min(50px, calc((100vw - 195px) / 2 - 3%));
+    height: min(50px, calc((100vw - 195px) / 2 - 3%));
 
-    padding-left: 0;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+}
 
-    list-style: none;
+#previous {
+    background-image: url("./previous.png");
+}
 
-    background-color: rgb(101, 181, 231);
-    border-radius: 40px;
-    box-shadow: 10px 10px 5px rgb(54, 54, 187);
+#next {
+    background-image: url("./next.png");
+}
 
+.description {
+    margin-top: 5px;
+    grid-column: span 3;
     text-align: center;
 }
 
-.images {
+.gallery-images {
     width: 175px;
-}
-
-ul.carousel li {
-    display: inline;
-    vertical-align: middle;
-}
-
-/* Buttons */
-
-
-button, .language, .my-email {
-    color:white;
-    text-decoration: none;
-    background-color: rgb(54, 100, 199);
-
-    border-radius: 10px;
-    border: 1px solid rgb(24, 85, 170);
-    box-shadow: 2px 1px darkblue;
-    cursor: pointer;
-
-    font-weight: 550
-}
-
-button:disabled, button:hover:disabled {
-    background-color: darkgray;
-    border: 1px solid gray;
-    box-shadow: 2px 1px gray;
-
-    cursor: default;
-}
-
-button:hover, .language:hover, .my-email:hover {
-    background-color: rgb(35, 69, 143);
-    border: 1px solid rgb(8, 31, 62);
-}
-
-.my-email {
-    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 /* Images */
 
 img {
+    width: 175px;
     margin: 0;
     border: 0;
-}
-
-img.current {
-    width: 150px;
-    border: 5px solid rgb(24, 85, 170);
 }

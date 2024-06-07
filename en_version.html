@@ -6,127 +6,112 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="./girl_power.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <header>
+            <h1 class="site-name">Ella Ksenofontova's site</h1>
             <a href="index.html" class="language">RU</a>
-            <a href="#" class="language">EN</a>
-            <h1>Ella Ksenofontova's site</h1>
         </header>
 
-        <main>
-            <h2>About me</h2>
-            <i>Lower you can see gallery of images with me. Click on arrows to watch other images.</i>
-            <ul class="carousel">
-                <li><button class="arrow" disabled>←</button></li>
-                <div class="images">
-                    <img src="img1.jpg" height="200" width="150" title="Me in Bolshoi Theatre" class="current" id="1">
-                    <img src="img2.jpg" height="200" width="0" hidden id="2">
-                    <img src="img3.jpg" height="200" width="0" title="Once I tried to paint self-portrait from this photo" hidden id="3">
-                    <img src="img4.jpg" height="200" width="0" hidden id="4">
-                    <img src="img5.jpg" height="200" width="0" title="I love cats so much)))" hidden id="5">
-                </div>
-                <li><button class="arrow">→</button></li>
-            </ul>
-            My name is Ella Ksenofontova, I'm fifteen years old, I live in Moscow and learn programming,
-            to be precise, front-end development. Except HTML/CSS/JS I like drawing, cats and tasty food.
+        <div class="image-container"></div>
 
-            <h2>My skills</h2>
-            <h3>Hard Skills</h3>
+        <main>
+            <h2>Contents</h2>
+            <ol>
+                <li><a href="#about-me">About me</a></li>
+                <li><a href="#i-love">I love...</a></li>
+                <li><a href="#hard-skills">Hard skills</a></li>
+                <li><a href="#soft-skills">Soft skills</a></li>
+                <li><a href="#my-projects">My projects</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="#copyright">Copyright</a></li>
+            </ol>
+
+            <h2 id="about-me">About me</h2>
             <ul>
-                <li>I know HTML, CSS and JavaScript, including adaptive design.</li>
-                <li>I am familiar with React, including advanced hooks like useReducer, useContext и useEffect.</li>
-                <li>I learned SASS, but I didn't have much practice, so I forgot almost everything :(</li>
-                <li>I Worked with Node.js: created React app with corresponding command and installed packages in my React apps.</li>
-                <li>Finally, I'm familar with Git.</li> 
+                <li>I'm 16 years old</li>
+                <li>I live in Moscow</li>
+                <li>I want to become frontend, then fullstack developer</li>
             </ul>
-            <h3>Soft Skills</h3>
+
+            <h2 id="i-love">I love...</h2>
+            <ul>
+                <li>Cats 🐈‍⬛</li>
+                <li>Drawing 🎨</li>
+                <li>Tasty food 🍕</li>
+                <li>80s music 🎧</li>
+                <li>Dress-up games 🎮</li>
+            </ul>
+
+            <h2 id="hard-skills">Hard Skills</h2>
+            <ul>
+                <li>I know the basics of web development (HTML, CSS, JS), including responsive design, well.</li>
+                <li>I understand React at quite deep level, with an experience of using hooks like useContext and useEffect.</li>
+                <li>I learnt SASS and SCSS, and know the first better.</li>
+                <li>I worked with npm: used create-react-app, installed npm packages.</li>
+                <li>I can work with Git.</li> 
+            </ul>
+
+            <h2 id="soft-skills">Soft Skills</h2>
             <ul>
                 <li>Organised, hard-working and purposeful</li> 
                 <li>Have a good memory</li> 
                 <li>Willing to help others</li> 
-                <li>Write correctly both in Russian and in English</li> 
+                <li>Write correctly both in Russian and English</li> 
             </ul>
 
-            <h2>My projects</h2>
-            Note: all these projects are available only in Russian. Maybe I will make English versions in future.
-            <h3>1. Quiz about me</h3>
-            A simple site with 10 questions about me and demonstration of results after answering them. It's adaptive. This quiz is the first project I deployed on GitHub Pages.<br>
-            <a href="https://ella-ksenofontova.github.io/test-about-me/">Link to page</a> / <a href="https://github.com/Ella-Ksenofontova/test-about-me/">Link to repositiory</a>
-            <h3>2. Digital cook</h3>
-            Gist of this web application is in showing to user dishes according to their choice in cuisines, dish types and ingredients.
-            There's also Python version, but it's not finished.<br />
-            <a href="https://ella-ksenofontova.github.io/digital-cook-web/">Link to page</a> / <a href="https://github.com/Ella-Ksenofontova/digital-cook-web/">Link to repositiory</a>
-            <h3>3. Site about styles in interior design and architecture</h3>
-            This side is made with React and it's not done because there are some bugs. <br />
-            <a href="https://ella-ksenofontova.github.io/interior-design-styles/">Link to page</a> / <a href="https://github.com/Ella-Ksenofontova/interior-design-styles/">Link to repositiory</a>
+            <h2 id="my-projects">My projects (all only in Russian)</h2>
+
+                <h3>1. Quiz about me</h3>
+                Simple website with 10 questions about me and output of results after answering. It is the first project I deployed to GitHub Pages.<br>
+                <a href="https://ella-ksenofontova.github.io/test-about-me/">Link to page</a> <br />
+                <a href="https://github.com/Ella-Ksenofontova/test-about-me">Link to repository</a>
+
+                <h3>2. Digital cook</h3>
+                Web app that finds dishes that match cuisines, categories and ingredients chosen by user. There's also Python version but I didn't publish it and not going to do this.<br />
+                <a href="https://ella-ksenofontova.github.io/digital-cook-web/">Link to page</a> <br />
+                <a href="https://github.com/Ella-Ksenofontova/digital-cook-web">Link to repository</a>
+
+                <h3>3. Website abot styles in interior design and architecture</h3>
+                This site uses React, Firestore Database and <strong>@floating-ui/react-dom</strong> npm package. <br>
+                <a href="https://ella-ksenofontova.github.io/interior-design-styles/">Link to page</a> <br />
+                <a href="https://github.com/Ella-Ksenofontova/interior-design-styles">Link to repository</a>
+
+            <h2 id="gallery">Gallery</h2>
+            <div class="gallery-carousel">
+                <button id="previous"></button>
+
+                <div class="gallery-images">
+                    <img src="./img1.jpg" alt="Me in Bolshoi Theatre" id="1">
+                    <img src="./img2.jpg" alt="Me in beautiful coat" id="2">
+                    <img src="./img3.jpg" alt="Me in Turkey" id="3">
+                    <img src="./img4.jpg" alt="Me in amazing bomber" id="4">
+                    <img src="./img5.jpg" alt="I love cats so much!" id="5">
+                </div>
+
+                <button id="next"></button>
+                <div class="description">Me in Bolshoi Theatre</div>
+            </div>
             
-            <h2>Copyright</h2>
+            <h2 id="copyright">Copyright</h2>
             <ul>
-                <li><a href="https://www.flaticon.com/authors/freepik">Link to author of favicon (icon of the site)</a></li>
-                <li><a href="https://storytale.io/">Link to source of image used in 404 page</a></li>
-                <li><a href="https://www.flaticon.com/authors/triangle-squad">Link to author of favicon used in 404 page</a></li>
+                <li><a href="https://www.flaticon.com/authors/freepik">Author of favicon</a></li>
+                <li><a href="https://storytale.io/">Author of image used in 404 page</a></li>
+                <li><a href="https://www.flaticon.com/authors/triangle-squad">Author of 404 page favicon</a></li>
+                <li><a href=" https://www.flaticon.com/authors/dmitri13">Author of arrow icon</a></li>
+                <li><a href="https://www.freepik.com/author/freepik">Author of image used in header</a></li>
             </ul>
         </main>
 
         <footer>
-            <a href="mailto:ellaksenofontova@gmail.com" class="my-email">Contact me</a>
+            <a href="mailto:ellaksenofontova@gmail.com" class="my-email">Contact me via email</a><br />
+            Telegram: <a href="https://t.me/bezukhova_stoltz">@bezukhova_stoltz</a>
         </footer>
 
-        <script>
-            let carousel = document.querySelector(".carousel");
-            
-            function showNthImage(number) {
-                for (let child of carousel.children) {
-                    if (child.classList.contains("images")) {
-                        for (let image of child.children) {
-                            if (image.id == number) {
-                                image.hidden = false;
-                                image.width = "150";
-                                image.classList.add("current");
-                            } else {
-                                image.hidden = true;
-                                image.width = "0";
-                                image.classList.remove("current");
-                            }
-                        }
-                    }
-                }
-            }
-
-            function moveLeft() {
-                if (currentImgNumber > 1) {
-                    showNthImage(currentImgNumber - 1);
-                    currentImgNumber --;
-
-                    if (currentImgNumber == 1) {
-                        arrowLeft.disabled = true;
-                    }
-
-                    if (arrowRight.disabled) arrowRight.disabled = false;
-                }
-            }
-
-            function moveRight() {
-                if (currentImgNumber < 5) {
-                    showNthImage(currentImgNumber + 1);
-                    currentImgNumber ++;
-
-                    if (currentImgNumber == 5) {
-                        arrowRight.disabled = true;
-                    }
-
-                    if (arrowLeft.disabled) arrowLeft.disabled = false;
-                }
-            }
-
-            let currentImgNumber = 1;
-
-            let [arrowLeft, arrowRight] = carousel.querySelectorAll(".arrow");
-
-            arrowLeft.addEventListener("click", () => moveLeft());
-            arrowRight.addEventListener("click", () => moveRight());
-        </script>
+        <script src="./index.js"></script>
     </body>
 </html>
