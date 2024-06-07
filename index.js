@@ -43,11 +43,6 @@ function moveRight() {
 }
 
 let currentImgNumber = 1;
-const previous = document.getElementById("previous");
-const next = document.getElementById("next");
-
-previous.addEventListener("click", moveLeft);
-next.addEventListener("click", moveRight);
 
 document.addEventListener("DOMContentLoaded", () => {
   const images = document.querySelectorAll("img");
@@ -55,4 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const ratio = image.naturalHeight / image.naturalWidth;
     image.height = ratio * 175;
   }
+
+  const previous = document.getElementById("previous");
+  const next = document.getElementById("next");
+
+  previous.addEventListener("click", moveLeft);
+  next.addEventListener("click", moveRight);
 })
