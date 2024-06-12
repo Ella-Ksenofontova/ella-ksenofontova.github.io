@@ -131,6 +131,10 @@ a {
     scroll-behavior: smooth;
 }
 
+.auto-scroll {
+    scroll-behavior: auto;
+}
+
 /* Images */
 
 img {

@@ -15,6 +15,8 @@ function showNthImage(number) {
         scrollWidth += 185;
       }
 
+      const galleryImages = document.querySelector(".gallery-images");
+      galleryImages.classList.remove("auto-scroll");
       child.scrollTo(scrollWidth, 0);
     }
   }
@@ -56,4 +58,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
   previous.addEventListener("click", moveLeft);
   next.addEventListener("click", moveRight);
-})
+});
+
+function preventDefault(event) {
+  event.preventDefault();
+}
+
+const galleryImages = document.querySelector(".gallery-images");
+galleryImages.ontouchstart = () => {
+  let supportsPassive = false;
+  try {
+    const opts = Object.defineProperty({}, 'passive', {
+      get: function () {
+        supportsPassive = true;
+      }
+    });
+    window.addEventListener("test", null, opts);
+  } catch (e) {
+
+  }
+
+  const options = supportsPassive ? { passive: false } : false;
+
+  window.addEventListener("mousewheel", preventDefault, options);
+  window.addEventListener('touchmove', preventDefault, options);
+
+  galleryImages.classList.add("auto-scroll");
+  galleryImages.onpointermove = event => {
+    galleryImages.scrollTo(galleryImages.scrollLeft - event.movementX, 0);
+  }
+};
+
+galleryImages.ontouchend = () => {
+  galleryImages.onpointermove = "";
+  galleryImages.classList.remove("auto-scroll");
+  
+  if (galleryImages.scrollLeft - 185 * (currentImgNumber - 1) > 185 / 2 && currentImgNumber < 5) {
+    moveRight();
+  } else if (galleryImages.scrollLeft - 185 * (currentImgNumber - 1) < -185 / 2 && currentImgNumber > 1) {
+    moveLeft();
+  } else {
+    showNthImage(currentImgNumber);
+  }
+
+  window.removeEventListener("mousewheel", preventDefault);
+  window.removeEventListener('touchmove', preventDefault);
+}
