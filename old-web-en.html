@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Old Web - сайт Эллы Ксенофонтовой</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./old-web.css">
+</head>
+
+<body>
+  <header>
+    <img src="./old-web-logo.png" alt="Логотип раздела сайта" height="75" width="75">
+    <h1>Сайт Эллы Ксенофонтовой</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="#about-me">About me</a></li>
+      <li><a href="#i-love">I love...</a></li>
+      <li><a href="#hard-skills">Hard skills</a></li>
+      <li><a href="#soft-skills">Soft skills</a></li>
+      <li><a href="#my-projects">My projects</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#copyright">Copyright</a></li>
+    </ul>
+    <button id="toggle-menu">Close navigation</button>
+  </nav>
+  <main>
+    <section id="about-me">
+      <div class="divider about-me"></div>
+      <h2>About me</h2>
+      <div class="divider about-me"></div>
+      <ul>
+        <li>I'm 16 years old</li>
+        <li>I live in Moscow</li>
+        <li>I want to become frontend, then fullstack developer</li>
+      </ul>
+    </section>
+
+    <section id="i-love">
+      <div class="divider i-love"></div>
+      <h2>I love...</h2>
+      <div class="divider i-love"></div>
+      <ul>
+        <li>Cats</li>
+        <li>Drawing</li>
+        <li>Tasty food</li>
+        <li>80s music</li>
+        <li>Dress-up games</li>
+      </ul>
+    </section>
+
+    <section id="hard-skills">
+      <div class="divider hard-skills"></div>
+      <h2>Hard Skills</h2>
+      <div class="divider hard-skills"></div>
+      <ul>
+        <li>I know the basics of web development (HTML, CSS, JS), including responsive design, well.</li>
+        <li>I understand React at quite deep level, with an experience of using hooks like useContext and useEffect.
+        </li>
+        <li>I learnt SASS and SCSS.</li>
+        <li>I worked with npm: used create-react-app, installed npm packages.</li>
+        <li>I can work with Git.</li>
+        <li>Last but not the least, I use Vite in one of my projects.</li>
+      </ul>
+    </section>
+    <section id="soft-skills">
+      <div class="divider soft-skills"></div>
+      <h2>Soft Skills</h2>
+      <div class="divider soft-skills"></div>
+      <ul>
+        <li>Organised, hard-working and purposeful</li>
+        <li>Have a good memory</li>
+        <li>Willing to help others</li>
+        <li>Write correctly both in Russian and English</li>
+      </ul>
+    </section>
+    <section id="my=projects">
+      <div class="divider my-projects"></div>
+      <h2>My projects (all only in Russian)</h2>
+      <div class="divider my-projects"></div>
+      <h3>1. Quiz about me</h3>
+      Simple website with 10 questions about me and output of results after answering. It is the first project I
+      deployed to GitHub Pages.<br>
+      <a href="https://ella-ksenofontova.github.io/test-about-me/">Link to page</a> <br />
+      <a href="https://github.com/Ella-Ksenofontova/test-about-me">Link to repository</a>
+
+      <h3>2. Digital cook</h3>
+      Web app that finds dishes that match cuisines, categories and ingredients chosen by user. There's also Python
+      version but I didn't publish it and not going to do this.<br />
+      <a href="https://ella-ksenofontova.github.io/digital-cook-web/">Link to page</a> <br />
+      <a href="https://github.com/Ella-Ksenofontova/digital-cook-web">Link to repository</a>
+
+      <h3>3. Website abot styles in interior design and architecture</h3>
+      This site uses React, Firestore Database (but later I removed it) and <strong>@floating-ui/react-dom</strong> npm
+      package. <br>
+      <a href="https://ella-ksenofontova.github.io/interior-design-styles/">Link to page</a> <br />
+      <a href="https://github.com/Ella-Ksenofontova/interior-design-styles">Link to repository</a>
+    </section>
+
+    <section id="gallery">
+      <div class="divider gallery"></div>
+      <h2>Галерея изображений со мной</h2>
+      <div class="divider gallery"></div>
+      <div class="gallery-of-images">
+        <figure>
+          <img src="./img1.jpg" alt="Me in Bolshoi Theatre" id="1" width="175" height="250">
+          <figcaption>Me in Bolshoi Theatre</figcaption>
+        </figure>
+        <figure>
+          <img src="./img2.jpg" alt="Me in beautiful coat" id="2" width="175" height="200">
+          <figcaption>Me in beautiful coat</figcaption>
+        </figure>
+        <figure>
+          <img src="./img3.jpg" alt="Me in Turkey" id="3" width="175" height="200">
+          <figcaption>Me in Turkey</figcaption>
+        </figure>
+        <figure>
+          <img src="./img4.jpg" alt="Me in amazing bomber" id="4" width="175" height="200">
+          <figcaption>Me in amazing bomber</figcaption>
+        </figure>
+        <figure>
+          <img src="./img5.jpg" alt="I love cats so much!" id="5" width="175" height="200">
+          <figcaption>I love cats so much!</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section id="copyright">
+      <div class="divider copyright"></div>
+      <h2>Copyright</h2>
+      <div class="divider copyright"></div>
+      <ul>
+        <li><a href="https://ru.pinterest.com/pin/949626271424703547/">Pin where image used in header was taken from</a></li>
+        <li><a href="https://frutiger-aero.org/icons">You can download icons used as dividers' backgrounds here</a></li>
+      </ul>
+    </section>
+  </main>
+  <script src="./old-web.js"></script>
+  <footer>
+    <address>
+      <a href="mailto:ellaksenofontova@gmail.com" class="my-email">Contact me via email</a><br />
+      Telegram: <a href="https://t.me/bezukhova_stoltz">@bezukhova_stoltz</a><br />
+      VK: <a href="https://vk.com/ellaksenofontova">ellaksenofontova</a>
+    </address>
+  </footer>
+</body>
+
+</html>
