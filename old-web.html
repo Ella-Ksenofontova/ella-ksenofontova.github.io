@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Old Web - сайт Эллы Ксенофонтовой</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./old-web.css">
+</head>
+
+<body>
+  <header>
+    <img src="./old-web-logo.png" alt="Логотип раздела сайта" height="75" width="75">
+    <h1>Сайт Эллы Ксенофонтовой</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="./index.html">Главная</a></li>
+      <li><a href="#about-me">О себе</a></li>
+      <li><a href="#i-love">Я люблю...</a></li>
+      <li><a href="#hard-skills">Hard skills</a></li>
+      <li><a href="#soft-skills">Soft skills</a></li>
+      <li><a href="#my-projects">Мои проекты</a></li>
+      <li><a href="#gallery">Галерея изображений со мной</a></li>
+      <li><a href="#copyright">Ссылки на авторов стороннего контента</a></li>
+    </ul>
+    <button id="toggle-menu">Закрыть навигацию</button>
+  </nav>
+  <main>
+    <section id="about-me">
+      <div class="divider about-me"></div>
+      <h2>О себе</h2>
+      <div class="divider about-me"></div>
+      <ul>
+        <li>Мне 16 лет</li>
+        <li>Я живу в Москве</li>
+        <li>Хочу стать frontend-, а позднее fullstack-разработчиком</li>
+      </ul>
+    </section>
+
+    <section id="i-love">
+      <div class="divider i-love"></div>
+      <h2>Я люблю...</h2>
+      <div class="divider i-love"></div>
+      <ul>
+        <li>Котиков</li>
+        <li>Рисовать</li>
+        <li>Вкусно поесть</li>
+        <li>Музыку 80-х</li>
+        <li>Игры-одевалки</li>
+      </ul>
+    </section>
+
+    <section id="hard-skills">
+      <div class="divider hard-skills"></div>
+      <h2>Hard Skills</h2>
+      <div class="divider hard-skills"></div>
+      <ul>
+        <li>Хорошо знакома с тремя китами веб-разработки: HTML, CSS и JavaScript, а также с адаптивной вёрсткой.
+        </li>
+        <li>Знаю React на достаточно глубоком уровне: использовала продвинутые хуки вроде useContext и useEffect.
+        </li>
+        <li>Изучала SASS и SCSS.</li>
+        <li>Работала с Node.js: создавала приложение на React с помощью create-react-app, устанавливала в такое
+          приложение пакеты.</li>
+        <li>Умею работать с Git.</li>
+        <li>Пользовалась сборщиком Vite.</li>
+      </ul>
+    </section>
+    <section id="soft-skills">
+      <div class="divider soft-skills"></div>
+      <h2>Soft Skills</h2>
+      <div class="divider soft-skills"></div>
+      <ul>
+        <li>Организованна, трудолюбива и целеустремлённа</li>
+            <li>Обладаю хорошей памятью</li>
+            <li>Стремлюсь помочь другим</li>
+            <li>Грамотно пишу как на русском, так и на английском</li>
+      </ul>
+    </section>
+    <section id="my=projects">
+      <div class="divider my-projects"></div>
+      <h2>Мои проекты</h2>
+      <div class="divider my-projects"></div>
+      <h3>1. Викторина обо мне</h3>
+        Простой сайт с десятью вопросами обо мне и выводом результатов после ответа на них. Это первый проект, который я
+        развернула на GitHub Pages.<br>
+        <a href="https://ella-ksenofontova.github.io/test-about-me/">Ссылка на страницу</a> <br />
+        <a href="https://github.com/Ella-Ksenofontova/test-about-me">Ссылка на репозиторий</a>
+
+        <h3>2. Цифровой повар</h3>
+        Веб-приложение, алгоритм которого подбирает блюда на основе выбранных пользователем кухонь, категорий и
+        ингредиентов. Есть ещё версия на Python, но она никуда не выложена.<br />
+        <a href="https://ella-ksenofontova.github.io/digital-cook-web/">Ссылка на страницу</a> <br />
+        <a href="https://github.com/Ella-Ksenofontova/digital-cook-web">Ссылка на репозиторий</a>
+
+        <h3>3. Сайт о стилях в дизайне интерьеров и архитектуре</h3>
+        Этот сайт написан на React. Я использовала при его создании СУБД Firestore (сейчас я отказалась от неё) и
+        npm-пакет <strong>@floating-ui/react-dom</strong>. <br>
+        <a href="https://ella-ksenofontova.github.io/interior-design-styles/">Ссылка на страницу</a> <br />
+        <a href="https://github.com/Ella-Ksenofontova/interior-design-styles">Ссылка на репозиторий</a>
+
+    </section>
+
+    <section id="gallery">
+      <div class="divider gallery"></div>
+      <h2>Галерея изображений со мной</h2>
+      <div class="divider gallery"></div>
+      <div class="gallery-of-images">
+        <figure>
+          <img src="./img1.jpg" alt="Я в Большом театре" id="1" width="175" height="250">
+          <figcaption>Я в Большом театре</figcaption>
+        </figure>
+        <figure>
+          <img src="./img2.jpg" alt="Я в красивом пальто" id="2" width="175" height="200">
+          <figcaption>Я в красивом пальто</figcaption>
+        </figure>
+        <figure>
+          <img src="./img3.jpg" alt="Я в Турции" id="3" width="175" height="200">
+          <figcaption>Я в Турции</figcaption>
+        </figure>
+        <figure>
+          <img src="./img4.jpg" alt="Я в красивом бомбере" id="4" width="175" height="200">
+          <figcaption>Я в красивом бомбере</figcaption>
+        </figure>
+        <figure>
+          <img src="./img5.jpg" alt="Я очень люблю котиков!" id="5" width="175" height="200">
+          <figcaption>Я очень люблю котиков!</figcaption>
+        </figure>      
+      </div>
+    </section>
+    <section id="copyright">
+      <div class="divider copyright"></div>
+      <h2>Ссылки на авторов стороннего контента</h2>
+      <div class="divider copyright"></div>
+      <ul>
+        <li><a href="https://ru.pinterest.com/pin/949626271424703547/">Пин, откуда была взята картинка, использованная в шапке сайта</a></li>
+        <li><a href="https://frutiger-aero.org/icons">Здесь можно скачать иконки, использованные как фоны для разделителей</a></li>
+      </ul>
+    </section>
+  </main>
+  <script src="./old-web.js"></script>
+  <footer>
+    <address>
+      <a href="mailto:ellaksenofontova@gmail.com" class="my-email">Написать мне на почту</a><br />
+      ТГ: <a href="https://t.me/bezukhova_stoltz">@bezukhova_stoltz</a><br />
+      ВК: <a href="https://vk.com/ellaksenofontova">ellaksenofontova</a>
+    </address>
+  </footer>
+</body>
+</html>
