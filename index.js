@@ -23,7 +23,7 @@ function showNthImage(number) {
 
   currentImgNumber = number;
 
-  const images = document.querySelectorAll("img");
+  const images = document.querySelectorAll(".gallery-images img");
   const description = images[currentImgNumber - 1].alt;
   document.querySelector(".description").innerHTML = description;
 }
@@ -47,7 +47,7 @@ function moveRight() {
 let currentImgNumber = 1;
 
 document.addEventListener("DOMContentLoaded", () => {
-  const images = document.querySelectorAll("img");
+  const images = document.querySelectorAll(".gallery-images img");
   for (let image of images) {
     const ratio = image.naturalHeight / image.naturalWidth;
     image.height = ratio * 175;

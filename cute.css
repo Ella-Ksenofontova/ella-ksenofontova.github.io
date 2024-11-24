@@ -1,0 +1,61 @@
+body, h1, h2, h3 {
+  font-family: "Caveat";
+}
+
+body, h2, h3 {
+  color: rgb(225, 137, 152);
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  font-size: 1.25rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header, footer {
+  background-color: rgb(217, 154, 165);
+  align-items: center;
+}
+
+.site-name:after {
+  content: "";
+}
+
+#home img {
+  width: 50px;
+  height: 50px;
+}
+
+h1 + img {
+  height: 50px;
+  width: 50px;
+}
+
+.image-container {
+  background-image: url("./header_bg_cute.jpg");
+}
+
+.preference-image {
+  height: 20px;
+  width: 20px;
+}
+
+.divider {
+  height: 25px;
+  background-size: contain;
+  background-image: url("./divider.gif");
+}
+
+#previous {
+  background-image: url("pixel-arrow-previous.png");
+}
+
+#next {
+  background-image: url("pixel-arrow-next.png");
+}
