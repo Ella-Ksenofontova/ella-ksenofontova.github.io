@@ -3,7 +3,7 @@ body, h1, h2, h3 {
 }
 
 body, h2, h3 {
-  color: rgb(225, 137, 152);
+  color: rgb(186, 100, 114);
 }
 
 a {
@@ -21,6 +21,12 @@ html {
 header, footer {
   background-color: rgb(217, 154, 165);
   align-items: center;
+}
+
+header .wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .site-name:after {
@@ -49,7 +55,7 @@ h1 + img {
 .divider {
   height: 25px;
   background-size: contain;
-  background-image: url("./divider.gif");
+  background-image: url("./divider.png");
 }
 
 #previous {
