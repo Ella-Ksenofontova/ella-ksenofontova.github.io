@@ -1,8 +1,8 @@
 @import url("./sitestyle.css");
 
 body {
-    display: grid;
-    grid-template-rows: 70px 200px auto;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -15,4 +15,5 @@ h1 {
 
 img {
     width: 100vw;
+    max-height: 50vh;
 }
