@@ -68,42 +68,18 @@ main {
   padding: 10px;
 }
 
-.divider {
-  height: 30px;
-  background-size: contain;
-  background-repeat: repeat-x;
+.wrapper {
+  display: flex;
+  align-items: start;
+  gap: 15px;
+}
+
+.wrapper img {
+  max-height: 50px;
 }
 
 h2 {
-  text-align: center;
-}
-
-.divider.about-me {
-  background-image: url("./about-me.png");
-}
-
-.divider.i-love {
-  background-image: url("./i-love.png");
-}
-
-.divider.hard-skills {
-  background-image: url("./hard-skills.png");
-}
-
-.divider.soft-skills {
-  background-image: url("./soft-skills.png");
-}
-
-.divider.my-projects {
-  background-image: url("./my-projects.png");
-}
-
-.divider.gallery {
-  background-image: url("./gallery.png");
-}
-
-.divider.copyright {
-  background-image: url("./copyright.png");
+  margin-block: 10px;
 }
 
 .gallery-of-images {
