@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+
+<head>
+  <title>
+    <% if (lang == "ru") { %>
+    Милый стиль - сайт Эллы Ксенофонтовой
+    <% } else { %>
+    Cute style - Ella Ksenofontova's website
+    <% } %>
+  </title>
+  <link rel="stylesheet" href="../css/sitestyle.css">
+  <link rel="stylesheet" href="../css/cute.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../assets/cute_favicon.gif">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu+Condensed&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <a href="/" id="home"><img src="../assets/home.gif" alt="На главную" height="15" width="15"></a>
+    <div class="wrapper">
+      <h1 class="site-name">
+        <% if (lang == "ru") { %>
+        Элла Ксенофонтова
+        <% } else { %>
+        Ella Ksenofontova
+        <% } %>
+      </h1>
+      <% if (lang == "ru") { %>
+        <img src="../assets/kitty.gif" alt="Анимированное изображение мультяшной кошечки">
+        <% } else { %>
+        <img src="../assets/kitty.gif" alt="Animated image of cartoon kitty">
+        <% } %>
+    </div>
+    <% if (lang == "ru") { %>
+    <a href="cute-en.html" class="language">ENG</a>
+    <% } else { %>
+    <a href="cute.html" class="language">RU</a>
+    <% } %>
+  </header>
+
+  <div class="image-container"></div>
+
+  <main>
+    <%- include('./parts/contents.ejs', {lang: lang}); %>
+    <div class="divider"></div>
+
+    <h2 id="about-me">
+      <% if(lang==="ru") { %>
+      О себе
+      <% } else { %>
+      About me
+      <% } %>
+    </h2>
+
+    <%- include('./parts/about-me.ejs', {lang: lang}); %>
+
+    <div class="divider"></div>
+
+    <h2 id="i-love">
+      <% if(lang==="ru") { %>
+      Я люблю...
+      <% } else{ %>
+      I love...
+      <% } %>
+    </h2>
+
+    <% if(lang==="ru") { %>
+    <ul>
+      <li>Котиков <span aria-hidden="true"><img class="preference-image" src="../assets/cats.gif"></span></li>
+      <li>Рисовать <span aria-hidden="true"><img class="preference-image" src="../assets/draw.gif"></span></li>
+      <li>Вкусно поесть <span aria-hidden="true"><img class="preference-image" src="../assets/tasty-food.gif"></span></li>
+      <li>Музыку 80-х <span aria-hidden="true"><img class="preference-image" src="../assets/music.gif"></span></li>
+      <li>Игры-одевалки <span aria-hidden="true"><img class="preference-image" src="../assets/dress-up.gif"></span></li>
+    </ul>
+    <% } else { %>
+    <ul>
+      <li>Cats <span aria-hidden="true"><img src="../assets/cats.gif"></span></li>
+      <li>Drawing <span aria-hidden="true"><img src="../assets/draw.gif"></span></li>
+      <li>Tasty food <span aria-hidden="true"><img src="../assets/tasty-food.gif"></span></li>
+      <li>80s music <span aria-hidden="true"><img src="../assets/music.gif"></span></li>
+      <li>Dress-up games <span aria-hidden="true"><img src="../assets/dress-up.gif"></span></li>
+    </ul>
+
+    <% } %>
+
+    <div class="divider"></div>
+
+    <h2 id="hard-skills">Hard Skills</h2>
+    <%- include('./parts/hard-skills.ejs', {lang: lang}); %>
+
+    <div class="divider"></div>
+
+    <h2 id="soft-skills">Soft Skills</h2>
+    <%- include('./parts/soft-skills.ejs', {lang: lang}); %>
+
+    <div class="divider"></div>
+
+    <h2 id="my-projects">
+      <% if (lang === "ru") { %>
+      Мои проекты
+      <% } else { %>
+      My projects (all only in Russian)
+      <% } %>
+    </h2>
+
+    <%- include('./parts/my-projects.ejs', {lang: lang}); %>
+
+    <div class="divider"></div>
+
+    <h2 id="mockups">
+      <% if (lang === "ru") { %>
+      Сайты, свёрстанные по чужим макетам
+      <% } else { %>
+      Website that were created with using others' mockups
+      <% } %>
+    </h2>
+
+    <%- include('./parts/mockups.ejs', {lang: lang}); %>
+
+
+    <div class="divider"></div>
+
+    <h2 id="gallery">Галерея</h2>
+    <div class="gallery-carousel">
+      <button id="previous"></button>
+
+      <%- include('./parts/gallery.ejs', {lang: lang}); %>
+
+      <button id="next"></button>
+      <div class="description">
+        <% if (lang === "ru") { %>
+        Я в Большом театре
+        <% } else { %>
+        Me in Bolshoi Theatre
+        <% } %>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <% if (lang === "ru") { %>
+    <h2 id="copyright">Ссылки на авторов стороннего контента</h2>
+    <ul>
+      <li><a href="https://pixels.crd.co/#pixels">Ссылка на источник фавикона (это иконка сайта)</a></li>
+      <li><a href=" https://www.flaticon.com/authors/dmitri13">Ссылка на автора иконки в виде стрелочки</a></li>
+      <li><a href="https://ru.pinterest.com/onlinesince2006/">Ссылка на автора картинки, использованной в шапке
+          сайта</a></li>
+      <li><a href="https://pixels.crd.co/#pixels">Ссылка на источник гифок, использованных в шапке сайта</a></li>
+      <li><a href="https://cutekawaiiresources.wordpress.com/2014/08/26/pixel-dividers/">Ссылка на источник
+          разделителя</a></li>
+    </ul>
+    <% } else { %>
+    <li><a href="https://pixels.crd.co/#pixels">Source of favicon</a></li>
+    <li><a href=" https://www.flaticon.com/authors/dmitri13">Source of arrow icon</a></li>
+    <li><a href="https://ru.pinterest.com/onlinesince2006/">Author of image used in top of the site</a></li>
+    <li><a href="https://pixels.crd.co/#pixels">Source of gifs used in header</a></li>
+    <li><a href="https://cutekawaiiresources.wordpress.com/2014/08/26/pixel-dividers/">Source of divider with
+        bows</a></li>
+    <% } %>
+  </main>
+
+  <%- include('./parts/footer.ejs', {lang: lang}); %>
+</body>
+
+</html>

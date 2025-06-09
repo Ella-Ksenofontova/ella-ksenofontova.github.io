@@ -48,7 +48,7 @@ h1 + img {
 }
 
 .image-container {
-  background-image: url("./header_bg_cute.jpg");
+  background-image: url(b9fd76e06848319cff86.jpg);
 }
 
 .preference-image {
@@ -59,13 +59,13 @@ h1 + img {
 .divider {
   height: 25px;
   background-size: contain;
-  background-image: url("./divider.png");
+  background-image: url(8c0ba926434cecbe1eb6.png);
 }
 
 #previous {
-  background-image: url("pixel-arrow-previous.png");
+  background-image: url(0fabb19721b045377230.png);
 }
 
 #next {
-  background-image: url("pixel-arrow-next.png");
+  background-image: url(1edab7214de49033bf13.png);
 }

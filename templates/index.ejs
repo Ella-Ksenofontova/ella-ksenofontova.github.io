@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+
+<head>
+  <title>
+    <% if(lang==="ru" ){ %>
+    Сайт-портфолио Эллы Ксенофонтовой
+    <% } else{ %>
+    Online Portfolio of Ella Ksenofontova
+    <% } %>
+  </title>
+  <link rel="stylesheet" href="../css/sitestyle.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../assets/girl_power.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+
+    <% if(lang==="ru" ){ %>
+    <h1 class="site-name">Элла Ксенофонтова</h1>
+    <a href="en-version.html" class="language">ENG</a>
+    <% } else{ %>
+    <h1>Ella Ksenofontova's site </h1>
+    <a href="index.html" class="language">RU</a>
+    <% } %>
+  </header>
+
+  <div class="image-container"></div>
+
+  <main>
+    <%- include('./parts/contents.ejs', {lang: lang}); %>
+
+    <h2 id="about-me">
+      <% if(lang==="ru" ){ %>
+      О себе
+      <% } else{ %>
+      About me
+      <% } %>
+    </h2>
+
+    <%- include('./parts/about-me.ejs', {lang: lang}); %>
+
+    <h2 id="i-love">
+      <% if(lang==="ru" ){ %>
+      Я люблю...
+      <% } else{ %>
+      I love...
+      <% } %>
+    </h2>
+
+    <% if(lang==="ru") { %>
+    <ul>
+      <li>Котиков <span aria-hidden="true">😺</span></li>
+      <li>Рисовать <span aria-hidden="true">🎨</span></li>
+      <li>Вкусно поесть <span aria-hidden="true">🍕</span></li>
+      <li>Музыку 80-х <span aria-hidden="true">🎧</span></li>
+      <li>Игры-одевалки <span aria-hidden="true">🎮</span></li>
+    </ul>
+    <% } else { %>
+    <ul>
+      <li>Cats <span aria-hidden="true">😺</span></li>
+      <li>Drawing <span aria-hidden="true">🎨</span></li>
+      <li>Tasty food <span aria-hidden="true">🍕</span></li>
+      <li>80s music <span aria-hidden="true">🎧</span></li>
+      <li>Dress-up games <span aria-hidden="true">🎮</span></li>
+    </ul>
+
+    <% } %>
+
+    <h2 id="hard-skills">Hard Skills</h2>
+    <%- include('./parts/hard-skills.ejs', {lang: lang}); %>
+
+    <h2 id="soft-skills">Soft Skills</h2>
+    <%- include('./parts/soft-skills.ejs', {lang: lang}); %>
+
+    <h2 id="my-projects">
+      <% if (lang === "ru") { %>
+      Мои проекты
+      <% } else { %>
+      My projects (all only in Russian)
+      <% } %>
+    </h2>
+
+    <%- include('./parts/my-projects.ejs', {lang: lang}); %>
+
+    <h2 id="mockups">
+      <% if (lang === "ru") { %>
+      Сайты, свёрстанные по чужим макетам
+      <% } else { %>
+      Website that were created with using others' mockups
+      <% } %>
+    </h2>
+
+    <%- include('./parts/mockups.ejs', {lang: lang}); %>
+
+    <% if (lang === "ru") { %>
+    <h2>Другие версии сайта</h2>
+    <h3><a href="./old-web.html">Old Web</a></h3>
+    <h3><a href="./cute.html">Милый стиль</a></h3>
+    <% } else {%>
+    <h2>Other versions of website</h2>
+    <h3><a href="./old-web-en.html">Old Web</a></h3>
+    <h3><a href="./cute-en.html">Cute style</a></h3>
+    <% } %>
+
+    <h2 id="gallery">
+      <% if (lang === "ru") { %>
+      Галерея изображений со мной
+      <% } else { %>
+      Gallery
+      <% } %>
+    </h2>
+
+    <div class="gallery-carousel">
+      <button id="previous"></button>
+
+      <%- include('./parts/gallery.ejs', {lang: lang}); %>
+
+      <button id="next"></button>
+      <div class="description">
+        <% if (lang === "ru") { %>
+        Я в Большом театре
+        <% } else { %>
+        Me in Bolshoi Theatre
+        <% } %>
+      </div>
+    </div>
+    <% if (lang === "ru") { %>
+    <h2 id="copyright">Ссылки на авторов стороннего контента</h2>
+    <ul>
+      <li><a href="https://www.flaticon.com/authors/freepik">Ссылка на автора фавикона (это иконка сайта)</a></li>
+      <li><a href="https://storytale.io/">Ссылка на источник картинки, используемой на странице 404</a></li>
+      <li><a href="https://www.flaticon.com/authors/triangle-squad">Ссылка на автора фавикона страницы 404</a>
+      </li>
+      <li><a href=" https://www.flaticon.com/authors/dmitri13">Ссылка на автора иконки в виде стрелочки</a></li>
+      <li><a href="https://www.freepik.com/author/freepik">Ссылка на автора картинки, использованной в шапке
+          сайта</a></li>
+    </ul>
+    <% } else { %>
+    <h2 id="copyright">Copyright</h2>
+    <ul>
+      <li><a href="https://www.flaticon.com/authors/freepik">Author of favicon</a></li>
+      <li><a href="https://storytale.io/">Author of image used in 404 page</a></li>
+      <li><a href="https://www.flaticon.com/authors/triangle-squad">Author of 404 page favicon</a></li>
+      <li><a href=" https://www.flaticon.com/authors/dmitri13">Author of arrow icon</a></li>
+      <li><a href="https://www.freepik.com/author/freepik">Author of image used in header</a></li>
+    </ul>
+    <% } %>
+  </main>
+
+  <%- include('./parts/footer.ejs', {lang: lang}); %>
+</body>
+
+</html>

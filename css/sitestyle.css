@@ -34,7 +34,7 @@ header {
 .image-container {
     height: 350px;
     width: 100%;
-    background-image: url("./header_bg.jpg");
+    background-image: url("../assets/header_bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -113,11 +113,11 @@ a {
 }
 
 #previous {
-    background-image: url("./previous.png");
+    background-image: url("../assets/previous.png");
 }
 
 #next {
-    background-image: url("./next.png");
+    background-image: url("../assets/next.png");
 }
 
 .description {

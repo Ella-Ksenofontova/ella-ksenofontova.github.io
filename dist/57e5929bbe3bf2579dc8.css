@@ -1,0 +1,149 @@
+/* General */
+
+html { 
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    
+    font-family: "Noto Sans";
+    font-weight: 300;
+}
+
+header, footer {
+    background-color: #2BA9F0;
+    box-sizing: border-box;
+    color: white;
+}
+
+header a, footer a {
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+
+    padding-inline: 5px;
+}
+
+.image-container {
+    height: 350px;
+    width: 100%;
+    background-image: url("../assets/header_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+footer {
+    padding: 10px 3%;
+}
+
+main {
+    width: 95%;
+    margin-left: 3%;
+    margin-right: 2%;
+    margin-bottom: 3%;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h1, h2, h3 {
+    font-family: "Montserrat Alternates";
+    font-weight: 500;
+}
+
+h2, h3 {
+    color: #104C6E;
+}
+
+a {
+    color: #196B99;
+}
+
+@media screen and (min-device-width: 576px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .site-name::after {
+        content: '😺 🖥️ 🎨';
+    }
+
+    header {
+        padding-inline: 30px;
+    }
+}
+
+/* Header */
+.language {
+    margin-left: 7px;
+}
+
+@media screen and (min-device-width: 576px) {
+    .language {
+        transform: translateX(-5px);
+    }
+}
+
+/* Carousel */
+
+.gallery-carousel {
+    display: grid;
+    grid-template-columns: min(50px, calc((100vw - 195px) / 2 - 3%)) 175px min(50px, calc((100vw - 195px) / 2 - 3%));
+    align-items: center;
+    column-gap: 10px;
+}
+
+#previous, #next {
+    width: min(50px, calc((100vw - 195px) / 2 - 3%));
+    height: min(50px, calc((100vw - 195px) / 2 - 3%));
+
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+#previous {
+    background-image: url("../assets/previous.png");
+}
+
+#next {
+    background-image: url("../assets/next.png");
+}
+
+.description {
+    margin-top: 5px;
+    grid-column: span 3;
+    text-align: center;
+}
+
+.gallery-images {
+    width: 175px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.auto-scroll {
+    scroll-behavior: auto;
+}
+
+/* Images */
+
+img {
+    width: 175px;
+    height: auto;
+    margin: 0;
+    border: 0;
+}

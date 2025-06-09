@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <% if(lang==="ru") { %>
+    Old Web - сайт Эллы Ксенофонтовой
+    <% } else{ %>
+    Old Web - Ella Ksenofontova's website
+    <% } %>
+  </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/old-web.css">
+</head>
+
+<body>
+  <header>
+    <img src="../assets/old-web-logo.png" alt="
+    <% if (lang === 'ru') { %>
+    Логотип раздела сайта: футуристичный глобус, рядом с которым объёмный символ @
+    <% } else { %>
+    Logo of website's page: futuristic globe and 3D symbol @ nearby
+    <% } %>
+    " height="75" width="75">
+    <% if(lang==="ru") { %>
+    <h1 class="site-name">Сайт Эллы Ксенофонтовой</h1>
+    <% } else { %>
+    <h1>Ella Ksenofontova's website</h1>
+    <% } %>
+  </header>
+  <nav>
+    <% if(lang==="ru") { %>
+    <ul>
+      <li><a href="./index.html">Главная</a></li>
+      <li><a href="./old-web-en.html">Сменить язык</a></li>
+      <li><a href="#about-me">О себе</a></li>
+      <li><a href="#i-love">Я люблю...</a></li>
+      <li><a href="#hard-skills">Hard skills</a></li>
+      <li><a href="#soft-skills">Soft skills</a></li>
+      <li><a href="#my-projects">Мои проекты</a></li>
+      <li><a href="#mockups">Сайты, свёрстанные по чужим макетам</a></li>
+      <li><a href="#gallery">Галерея изображений со мной</a></li>
+      <li><a href="#copyright">Ссылки на авторов стороннего контента</a></li>
+    </ul>
+    <button id="toggle-menu">Закрыть навигацию</button>
+    <% } else { %>
+    <ul>
+      <li><a href="./en_version.html">Home</a></li>
+      <li><a href="./old-web.html">Switch language</a></li>
+      <li><a href="#about-me">About me</a></li>
+      <li><a href="#i-love">I love...</a></li>
+      <li><a href="#hard-skills">Hard skills</a></li>
+      <li><a href="#soft-skills">Soft skills</a></li>
+      <li><a href="#my-projects">My projects</a></li>
+      <li><a href="#mockups">Website that were created with using others' mockups</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#copyright">Copyright</a></li>
+    </ul>
+    <button id="toggle-menu">Close navigation</button>
+    <% } %>
+  </nav>
+  <main>
+    <section id="about-me">
+      <div class="wrapper"><img src="../assets/about-me.png" alt="
+    <% if (lang === 'ru') { %>
+    Иконка из Windows7, изображающая двух людей
+    <% } else { %>
+    Windows7 icon: two people
+    <% } %>
+    ">
+        <h2>
+          <% if(lang==="ru") { %>
+          О себе
+          <% } else { %>
+          About me
+          <% } %>
+        </h2>
+      </div>
+      <%- include('./parts/about-me.ejs', {lang: lang}) %>
+    </section>
+
+    <section id="i-love">
+      <div class="wrapper"><img src="../assets/i-love.png" alt="
+        <% if (lang === 'ru') { %>
+    Иконка из Windows7: зелёный щит с галочкой
+    <% } else { %>
+    Windows7 icon: green shield with check
+    <% } %>
+        ">
+        <h2>
+          <% if(lang==="ru") { %>
+          Я люблю...
+          <% } else{ %>
+          I love...
+          <% } %>.
+        </h2>
+      </div>
+      <ul>
+        <% if(lang==="ru") { %>
+        <li>Котиков</li>
+        <li>Рисовать</li>
+        <li>Вкусно поесть</li>
+        <li>Музыку 80-х</li>
+        <li>Игры-одевалки</li>
+        <% } else{ %>
+        <li>Cats</li>
+        <li>Drawing</li>
+        <li>Tasty food</li>
+        <li>80s music</li>
+        <li>Dress-up games</li>
+        <% } %>
+      </ul>
+    </section>
+
+    <section id="hard-skills">
+      <div class="wrapper"><img src="../assets/hard-skills.png" alt="
+        <% if (lang === 'ru') { %>
+    Иконка из Windows7: на переднем плане список из трёх пунктов, а позади - шестерёнка
+    <% } else { %>
+    Windows7 icon: list with 3 items forward and a gear behind
+    <% } %>
+        ">
+        <h2>Hard Skills</h2>
+      </div>
+      <%- include('./parts/hard-skills.ejs', {lang: lang}) %>
+    </section>
+    <section id="soft-skills">
+      <div class="wrapper"><img src="../assets/soft-skills.png" alt="
+        <% if (lang === 'ru') { %>
+    Иконка из Windows7: ромашка
+    <% } else { %>
+    Windows7 icon: chamomile
+    <% } %>
+        ">
+        <h2>Soft skills</h2>
+      </div>
+      <%- include('./parts/soft-skills.ejs', {lang: lang}) %>
+    </section>
+    <section id="my-projects">
+      <div class="wrapper"><img src="../assets/my-projects.png" alt="
+        <% if (lang === 'ru') { %>
+            Иконка из Windows7: на переднем плане - компьютер, позади - земной шар
+    <% } else { %>
+    Windows7 icon: computer and Earth
+    <% } %>
+        ">
+        <h2><% if (lang === "ru") { %>
+          Мои проекты
+          <% } else { %>
+          My projects (all only in Russian)
+          <% } %></h2>
+      </div>
+      <%- include('./parts/my-projects.ejs', {lang: lang}); %>
+    </section>
+
+    <section id="mockups">
+      <div class="wrapper"><img src="../assets/mockups.png" alt="
+        <% if (lang === 'ru') { %>
+            Иконка из Windows7: компьютер, рядом с каторым несколько палитр
+    <% } else { %>
+    Windows7 icon: computer with several palettes nearby
+    <% } %>">
+        <h2><% if (lang === "ru") { %>
+          Сайты, свёрстанные по чужим макетам
+          <% } else { %>
+          Website that were created with using others' mockups
+          <% } %></h2>
+      </div>
+      <%- include('./parts/mockups.ejs', {lang: lang}); %>
+    </section>
+
+    <section id="gallery">
+      <div class="wrapper"><img src="../assets/gallery.png" alt="
+         <% if (lang === 'ru') { %>
+            Иконка из Windows7: пейзаж, на переднем плане море, на заднем - горы и небо
+    <% } else { %>
+    Windows7 icon: landscape with sea, mountains and sky
+    <% } %>
+    ">
+        <h2> <% if (lang === "ru") { %>
+          Галерея изображений со мной
+          <% } else { %>
+          Gallery
+          <% } %></h2>
+      </div>
+      <div class="gallery-of-images">
+        <% if (lang == "ru") { %>
+        <figure>
+          <img src="../assets/img1.jpg" alt="Я в Большом театре" id="1" width="175" height="250">
+          <figcaption>Я в Большом театре</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/img2.jpg" alt="Я в красивом пальто" id="2" width="175" height="200">
+          <figcaption>Я в красивом пальто</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/img3.jpg" alt="Я в Турции" id="3" width="175" height="200">
+          <figcaption>Я в Турции</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/img4.jpg" alt="Я в красивом бомбере" id="4" width="175" height="200">
+          <figcaption>Я в красивом бомбере</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/img5.jpg" alt="Я очень люблю котиков!" id="5" width="175" height="200">
+          <figcaption>Я очень люблю котиков!</figcaption>
+        </figure>
+        <% } else { %>
+        <figure>
+          <img src="../assets/img1.jpg" alt="Me in Bolshoi Theatre" id="1" width="175" height="250">
+          <figcaption>Me in Bolshoi Theatre</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/img2.jpg" alt="Me in beautiful coat" id="2" width="175" height="200">
+          <figcaption>Me in beautiful coat</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/img3.jpg" alt="Me in Turkey" id="3" width="175" height="200">
+          <figcaption>Me in Turkey</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/img4.jpg" alt="Me in amazing bomber" id="4" width="175" height="200">
+          <figcaption>Me in amazing bomber</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/img5.jpg" alt="I love cats so much!" id="5" width="175" height="200">
+          <figcaption>I love cats so much!</figcaption>
+        </figure>
+        <% } %>
+      </div>
+    </section>
+    <section id="copyright">
+      <div class="wrapper">
+        <img src="../assets/copyright.png" alt="Иконка из Windows7: значок информации">
+        <% if (lang === "ru") { %>
+        <h2>Ссылки на авторов стороннего контента</h2>
+        <% } else { %>
+        <h2 id="copyright">Copyright</h2>
+        <% } %>
+      </div>
+      <ul>
+        <% if (lang === "ru") { %>
+        <li><a href="https://ru.pinterest.com/pin/949626271424703547/">Пин, откуда была взята картинка, использованная в
+            шапке сайта</a></li>
+        <li><a href="https://frutiger-aero.org/icons">Здесь можно скачать иконки, помещённые рядом с заголовками</a>
+        </li>
+        <% } else { %>
+        <li><a href="https://ru.pinterest.com/pin/949626271424703547/">Pin where image used in header was taken from</a>
+        </li>
+        <li><a href="https://frutiger-aero.org/icons">You can download icons used near headers here</a></li>
+        <% } %>
+      </ul>
+    </section>
+  </main>
+</body>
+
+</html>
