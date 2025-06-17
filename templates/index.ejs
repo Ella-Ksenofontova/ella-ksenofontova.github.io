@@ -33,7 +33,7 @@
   <div class="image-container"></div>
 
   <main>
-    <%- include('./parts/contents.ejs', {lang: lang}); %>
+    <%- include('./parts/contents.ejs', {lang: lang, isIndex: true}); %>
 
     <h2 id="about-me">
       <% if(lang==="ru" ){ %>
@@ -43,7 +43,7 @@
       <% } %>
     </h2>
 
-    <%- include('./parts/about-me.ejs', {lang: lang}); %>
+    <%- include('./parts/about-me.ejs', {lang: lang, isIndex: true}); %>
 
     <h2 id="i-love">
       <% if(lang==="ru" ){ %>
@@ -99,11 +99,11 @@
     <%- include('./parts/mockups.ejs', {lang: lang}); %>
 
     <% if (lang === "ru") { %>
-    <h2>Другие версии сайта</h2>
+    <h2 id="other-versions">Другие версии сайта</h2>
     <h3><a href="./old-web.html">Old Web</a></h3>
     <h3><a href="./cute.html">Милый стиль</a></h3>
     <% } else {%>
-    <h2>Other versions of website</h2>
+    <h2 id="other-versions">Other versions of website</h2>
     <h3><a href="./old-web-en.html">Old Web</a></h3>
     <h3><a href="./cute-en.html">Cute style</a></h3>
     <% } %>

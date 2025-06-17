@@ -47,7 +47,7 @@
   <div class="image-container"></div>
 
   <main>
-    <%- include('./parts/contents.ejs', {lang: lang}); %>
+    <%- include('./parts/contents.ejs', {lang: lang, isIndex: false}); %>
     <div class="divider"></div>
 
     <h2 id="about-me">
@@ -58,7 +58,7 @@
       <% } %>
     </h2>
 
-    <%- include('./parts/about-me.ejs', {lang: lang}); %>
+    <%- include('./parts/about-me.ejs', {lang: lang, isIndex: false}); %>
 
     <div class="divider"></div>
 
