@@ -1,3 +1,4 @@
 *.txt
 /windows-7-icons
 /node_modules
+/dist
