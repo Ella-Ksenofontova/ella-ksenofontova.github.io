@@ -8,7 +8,7 @@ if (page.includes("cute")) {
 } else if (page.includes("old-web")) {
   import("./css/old-web.css");
   import("./js/old-web.js");
-} else if (page.includes("index") || page === "") {
+} else if (page.includes("index") || page.includes("en") || page === "") {
   import("./css/sitestyle.css");
   import("./js/index.js");
 } else {
