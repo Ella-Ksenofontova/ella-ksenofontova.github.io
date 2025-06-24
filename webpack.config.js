@@ -91,8 +91,9 @@ module.exports = {
       })
     }),
     new HtmlWebpackPlugin({
+      inject: true,
       filename: "404.html",
-      template: "./404.html"
+      template: "404.html"
     }),
     new MiniCssExtractPlugin({
       filename: "style.css"
@@ -126,6 +127,14 @@ module.exports = {
             ]
           }
         }
+      },
+      {
+        test: /\.svg$/,
+        type: "asset/resource"
+      },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
       }
     ],
   },

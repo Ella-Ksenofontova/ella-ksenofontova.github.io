@@ -9,6 +9,9 @@
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",
     "path": "^0.12.7",
+    "raw-loader": "^4.0.2",
+    "svg-inline-loader": "^0.8.2",
+    "svg-url-loader": "^8.0.0",
     "template-ejs-loader": "^0.9.4",
     "webpack": "^5.99.9"
   },
