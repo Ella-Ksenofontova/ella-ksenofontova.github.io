@@ -90,6 +90,10 @@ module.exports = {
         }
       })
     }),
+    new HtmlWebpackPlugin({
+      filename: "404.html",
+      template: "./404.html"
+    }),
     new MiniCssExtractPlugin({
       filename: "style.css"
     })
