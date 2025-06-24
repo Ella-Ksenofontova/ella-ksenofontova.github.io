@@ -8,10 +8,9 @@ if (page.includes("cute")) {
 } else if (page.includes("old-web")) {
   import("./css/old-web.css");
   import("./js/old-web.js");
-}
-else if (page.includes("404")) {
-  import("./css/404.css")
-} else {
+} else if (page.includes("index") || page === "") {
   import("./css/sitestyle.css");
   import("./js/index.js");
+} else {
+  import("./css/404.css");
 }
