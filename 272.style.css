@@ -8,7 +8,7 @@ body {
     margin: 0;
     width: 100%;
     
-    font-family: "Noto Sans";
+    font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 300;
 }
 
@@ -34,7 +34,7 @@ header {
 .image-container {
     height: 350px;
     width: 100%;
-    background-image: url("../assets/header_bg.jpg");
+    background-image: url(35c7a567e9ea93f3916e.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -56,7 +56,7 @@ h1 {
 }
 
 h1, h2, h3 {
-    font-family: "Montserrat Alternates";
+    font-family: "Montserrat Alternates", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 500;
 }
 
@@ -113,11 +113,11 @@ a {
 }
 
 #previous {
-    background-image: url("../assets/previous.png");
+    background-image: url(7e932ecf1c88b26e0971.png);
 }
 
 #next {
-    background-image: url("../assets/next.png");
+    background-image: url(f7dec4b3d345c2347717.png);
 }
 
 .description {
@@ -146,4 +146,21 @@ img {
     height: auto;
     margin: 0;
     border: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+h1 {
+    color: #104C6E;
+}
+
+img {
+    width: 100vw;
+    max-height: 50vh;
 }
