@@ -5,11 +5,12 @@ html {
 body {
   margin: 0;
   font-family: "Roboto Mono", monospace;
-  color:rgb(24, 24, 24);
+  color: rgb(24, 24, 24);
   background-color: #aaaaaa;
 }
 
-header, footer {
+header,
+footer {
   padding-inline: 10px;
   background: linear-gradient(#747373, rgb(191, 189, 189), #747373);
   color: #fff;
@@ -26,6 +27,10 @@ header img {
   border-radius: 40%;
   border: 1px solid transparent;
   box-shadow: 3px 3px 3px #000;
+}
+
+section {
+  padding-block: 20px;
 }
 
 nav ul {
@@ -53,7 +58,8 @@ nav ul li a {
   padding-inline: 10px;
 }
 
-nav ul li a:hover, nav ul li a:focus {
+nav ul li a:hover,
+nav ul li a:focus {
   background: blue;
   color: white;
   outline: none;
@@ -92,6 +98,114 @@ footer a {
   color: white;
 }
 
+.cards {
+  flex-wrap: wrap;
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.about-me-cards .card {
+  border: none;
+}
+
+.about-me-cards .card:not(:last-child) {
+  border-bottom: 1px solid #000;
+}
+
+.card {
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #000;
+}
+
+.card-image {
+  width: 100%;
+  object-fit: cover;
+  background: white;
+}
+
+.card-title {
+  padding-inline: 20px;
+}
+
+.card-content {
+  padding-inline: 20px;
+  padding-bottom: 10px;
+}
+
+.card-links {
+  padding-inline: 20px;
+  padding-bottom: 10px;
+}
+
+#soft-skills>img {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  vertical-align: baseline;
+}
+
+.soft-skills h2 {
+  margin-top: -10px;
+}
+
+.soft-skills {
+  padding-left: 1rem;
+}
+
+.soft-skill::before {
+  content: "✓";
+  margin-right: 10px;
+}
+
+#i-love li::marker {
+  content: "✓ ";
+}
+
+figure {
+  text-align: center;
+}
+
+.projects-cards {
+  max-width: 800px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  gap: 0;
+}
+
+.project-card {
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.card {
+  flex-shrink: 0;
+}
+
+.buttons-panel {
+  display: flex;
+  justify-content: end;
+  max-width: 800px;
+  gap: 5px;
+}
+
+.prev-button,
+.next-button {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.prev-button {
+  transform: scaleX(-1);
+}
+
+
 @media screen and (max-width: 576px) {
   h1 {
     font-size: 1.5rem;
@@ -108,5 +222,11 @@ footer a {
 
   #toggle-menu {
     display: inline-block;
+  }
+}
+
+@media (min-width: 992px) {
+  .about-me-cards .card:not(:last-child) {
+    border-bottom: none;
   }
 }

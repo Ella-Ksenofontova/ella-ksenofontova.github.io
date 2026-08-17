@@ -1,0 +1,1 @@
+(self.webpackChunk=self.webpackChunk||[]).push([[925],{925:()=>{const e=document.querySelector(".menu-wrapper"),n=document.getElementById("menu-opener"),t=document.getElementById("menu-closer");e&&n&&t&&(n.addEventListener("click",(()=>e.classList.add("open"))),t.addEventListener("click",(()=>e.classList.remove("open"))))}}]);
