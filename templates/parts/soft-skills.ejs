@@ -1,15 +1,37 @@
-<% if(lang==="ru") { %>
-<ul>
-  <li>Организованна, трудолюбива и целеустремлённа</li>
-  <li>Обладаю хорошей памятью</li>
-  <li>Стремлюсь помочь другим</li>
-  <li>Грамотно пишу как на русском, так и на английском</li>
-</ul>
-<% } else { %>
-<ul>
-  <li>Organised, hard-working and purposeful</li>
-  <li>Have a good memory</li>
-  <li>Willing to help others</li>
-  <li>Write correctly both in Russian and English</li>
-</ul>
-<% } %>
+<% if(lang==="ru" ) { %>
+  <section class="soft-skills">
+    <div class="soft-skills-wrapper">
+      <div class="soft-skills-title-wrapper animated" data-delay="250">
+        <h2 id="soft-skills" class="soft-skills-title">Soft skills</h2>
+      </div>
+      <div class="left-part">
+        <div class="soft-skill animated" data-delay="500">Организованна</div>
+        <div class="soft-skill animated" data-delay="750">Трудолюбива</div>
+        <div class="soft-skill animated" data-delay="1000">Целеустремлённа</div>
+      </div>
+      <div class="right-part">
+        <div class="soft-skill animated" data-delay="1250">Обладаю хорошей памятью</div>
+        <div class="soft-skill animated" data-delay="1500">Стремлюсь помочь другим</div>
+        <div class="soft-skill animated" data-delay="1750">Грамотно пишу как на русском, так и на английском</div>
+      </div>
+    </div>
+  </section>
+  <% } else { %>
+    <section class="soft-skills">
+      <div class="soft-skills-wrapper">
+        <div class="soft-skills-title-wrapper">
+          <h2 id="soft-skills" class="soft-skills-title animated" data-delay="250">Soft skills</h2>
+        </div>
+        <div class="left-part">
+          <div class="soft-skill animated" data-delay="500">Organised</div>
+          <div class="soft-skill animated" data-delay="750">Hard-working</div>
+          <div class="soft-skill animated" data-delay="1000">Purposeful</div>
+        </div>
+        <div class="right-part">
+          <div class="soft-skill animated" data-delay="1250">Have a good memory</div>
+          <div class="soft-skill animated" data-delay="1500">Willing to help others</div>
+          <div class="soft-skill animated" data-delay="1750">Write correctly both in Russian and English</div>
+        </div>
+      </div>
+    </section>
+    <% } %>

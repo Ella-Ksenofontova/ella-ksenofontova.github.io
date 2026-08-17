@@ -1,25 +1,80 @@
-<% if (lang==="ru") { %>
-<ul>
-  <li>Хорошо знакома с тремя китами веб-разработки: HTML, CSS и JavaScript, а также с адаптивной вёрсткой.
-  </li>
-  <li>Знаю React на достаточно глубоком уровне: использовала продвинутые хуки вроде useContext и useEffect.
-  </li>
-  <li>Изучала SASS и SCSS.</li>
-  <li>Работала с Node.js (npm): создавала приложение на React с помощью create-react-app, устанавливала в такое
-    приложение пакеты.</li>
-  <li>Умею работать с Git.</li>
-  <li>Пользовалась сборщиком Vite, а также Webpack.</li>
-  <li>Работала с Jekyll и Eleventy.</li>
-</ul>
-<% } else { %>
-<ul>
-  <li>I know the basics of web development (HTML, CSS, JS), including responsive design, well.</li>
-  <li>I understand React at quite deep level, with an experience of using hooks like useContext and useEffect.
-  </li>
-  <li>I learnt SASS and SCSS.</li>
-  <li>I worked with Node.js (npm): used create-react-app, installed npm packages.</li>
-  <li>I can work with Git.</li>
-  <li>I use Vite and WEbpack in my projects.</li>
-  <li>I worked with Jekyll and Eleventy.</li>
-</ul>
-<% } %>
+<div class="cards">
+  <div class="card skills-card animated" data-delay="500">
+    <% if (lang==="ru" ) { %>
+      <img src="/assets/base stack.jpg" alt="Фон на тему веб-разработки" class="card-image">
+      <h3 class="card-title">HTML/CSS/JS</h3>
+      <div class="card-content">Базовый минимум веб-разработки</div>
+      <% } else { %>
+        <img src="/assets/base stack.jpg" alt="Web development background" class="card-image">
+        <h3 class="card-title">HTML/CSS/JS</h3>
+        <div class="card-content">The cornerstone of web development</div>
+        <% } %>
+  </div>
+  <div class="card skills-card animated" data-delay="750">
+    <% if (lang==="ru" ) { %>
+      <img src="/assets/react.webp" alt="Логотип React" class="card-image">
+      <h3 class="card-title">React</h3>
+      <div class="card-content">"Библиотека для создания пользовательских интерфейсов"<br> <cite>- Официальный сайт
+          React</cite></div>
+      <% } else { %>
+        <img src="/assets/react.webp" alt="React logo" class="card-image">
+        <h3 class="card-title">React</h3>
+        <div class="card-content">"The library for web and native user interfaces"<br> <cite>- Official React website</cite></div>
+        <% } %>
+  </div>
+  <div class="card skills-card animated" data-delay="1000">
+     <% if (lang==="ru" ) { %>
+      <img src="/assets/sass.svg" alt="Логотип Sass" class="card-image">
+      <h3 class="card-title">SASS/SCSS</h3>
+      <div class="card-content">Самый популярный CSS-препроцессор</div>
+      <% } else { %>
+        <img src="/assets/sass.svg" alt="Sass logo" class="card-image">
+        <h3 class="card-title">React</h3>
+        <div class="card-content">The most popular CSS preprocessor</div>
+        <% } %>
+  </div>
+  <div class="card skills-card animated" data-delay="1250">
+    <% if (lang==="ru" ) { %>
+      <img src="/assets/node js logo.webp" alt="Логотип Node.js" class="card-image">
+      <h3 class="card-title">Node.js, npm</h3>
+      <div class="card-content">В каждом проекте, над которым я работаю, есть package.json</div>
+      <% } else { %>
+        <img src="/assets/node js logo.webp" alt="Node.js logo" class="card-image">
+        <h3 class="card-title">Node.js, npm</h3>
+        <div class="card-content">There is package.json file in all my maintained projects</div>
+        <% } %>
+  </div>
+  <div class="card skills-card animated" data-delay="1500">
+    <% if (lang==="ru" ) { %>
+      <img src="/assets/git logo.png" alt="Логотип Git" class="card-image">
+      <h3 class="card-title">Git</h3>
+      <div class="card-content">Простая и мощная система контроля версий</div>
+      <% } else { %>
+        <img src="/assets/git logo.png" alt="Git logo" class="card-image">
+        <h3 class="card-title">Git</h3>
+        <div class="card-content">Simple and powerful version control system</div>
+        <% } %>
+  </div>
+  <div class="card skills-card animated" data-delay="1750">
+    <% if (lang==="ru" ) { %>
+      <img src="/assets/webpack and vite.png" alt="Логотипы Webpack и Vite" class="card-image">
+      <h3 class="card-title">Сборщики</h3>
+      <div class="card-content">Vite и Webpack</div>
+      <% } else { %>
+        <img src="/assets/webpack and vite.png" alt="Vite and Webpack logos" class="card-image">
+        <h3 class="card-title">Bundlers</h3>
+        <div class="card-content">Vite and Webpack</div>
+        <% } %>
+  </div>
+  <div class="card skills-card animated" data-delay="2000">
+    <% if (lang==="ru" ) { %>
+      <img src="/assets/jekyll.webp" alt="Логотип Jekyll" class="card-image">
+      <h3 class="card-title">Jekyll</h3>
+      <div class="card-content">Генератор статических веб-сайтов, который я использовала в своём блоге о моде</div>
+      <% } else { %>
+        <img src="/assets/jekyll.webp" alt="Jekyll logo" class="card-image">
+        <h3 class="card-title">Jekyll</h3>
+        <div class="card-content">Static websites generator which I used in my fashion blog</div>
+        <% } %>
+  </div>
+</div>

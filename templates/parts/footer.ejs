@@ -1,12 +1,12 @@
-  <footer>
-    <address>
-      <% if (lang === "ru") { %>
-      <a href="mailto:ellaksenofontova@gmail.com" class="my-email">Написать мне на почту</a><br />
-      ТГ: <a href="https://t.me/eleonora_blair">@eleonora_blair</a><br />
-      ВК (захожу очень редко): <a href="https://vk.com/ellaksenofontova">ellaksenofontova</a>
+<footer>
+  <address class="contact-wrapper">
+    <% if (lang==="ru" ) { %>
+      <div class="contact animated" data-delay="250"><a href="mailto:ellaksenofontova@gmail.com">Написать мне на почту</a></div>
+      <div class="contact animated" data-delay="500">ТГ: <a href="https://t.me/eleonora_blair">@eleonora_blair</a></div>
+      <div class="contact animated" data-delay="750">ВК (захожу очень редко): <a href="https://vk.com/ellaksenofontova">ellaksenofontova</a></div>
       <% } else { %>
-      <a href="mailto:ellaksenofontova@gmail.com" class="my-email">Contact me via email</a><br />
-      Telegram: <a href="https://t.me/eleonora_blair">@eleonora_blair</a>
-      <% } %>
-    </address>
-  </footer>
+        <div class="contact animated" data-delay="250"><a href="mailto:ellaksenofontova@gmail.com" class="my-email">Contact me via email</a></div>
+        <div class="contact animated" data-delay="500">Telegram: <a href="https://t.me/eleonora_blair">@eleonora_blair</a></div>
+        <% } %>
+  </address>
+</footer>

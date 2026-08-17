@@ -3,11 +3,11 @@
 
 <head>
   <title>
-    <% if (lang == "ru") { %>
-    Милый стиль - сайт Эллы Ксенофонтовой
-    <% } else { %>
-    Cute style - Ella Ksenofontova's website
-    <% } %>
+    <% if (lang=="ru" ) { %>
+      Милый стиль - сайт Эллы Ксенофонтовой
+      <% } else { %>
+        Cute style - Ella Ksenofontova's website
+        <% } %>
   </title>
   <link rel="stylesheet" href="../css/sitestyle.css">
   <link rel="stylesheet" href="../css/cute.css">
@@ -17,152 +17,192 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu+Condensed&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu+Condensed&family=Unbounded:wght@200..900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <a href="/" id="home"><img src="../assets/home.gif" alt="На главную" height="15" width="15"></a>
-    <div class="wrapper">
-      <h1 class="site-name">
-        <% if (lang == "ru") { %>
-        Элла Ксенофонтова
-        <% } else { %>
-        Ella Ksenofontova
+    <% if (lang=="ru" ) { %>
+      <button class="menu-button" id="menu-opener"><img src="../assets/cute-menu.png" alt="Открыть меню" height="50"
+          width="50"></button>
+      <% } else { %>
+        <button class="menu-button" id="menu-opener"><img src="../assets/cute-menu.png" alt="Open menu" height="50"
+            width="50"></button>
         <% } %>
-      </h1>
-      <% if (lang == "ru") { %>
-        <img src="../assets/kitty.gif" alt="Анимированное изображение мультяшной кошечки">
-        <% } else { %>
-        <img src="../assets/kitty.gif" alt="Animated image of cartoon kitty">
-        <% } %>
-    </div>
-    <% if (lang == "ru") { %>
-    <a href="cute-en.html" class="language">ENG</a>
-    <% } else { %>
-    <a href="cute.html" class="language">RU</a>
-    <% } %>
+          <div class="wrapper">
+            <h1 class="site-name">
+              <% if (lang=="ru" ) { %>
+                Элла Ксенофонтова
+                <% } else { %>
+                  Ella Ksenofontova
+                  <% } %>
+            </h1>
+            <% if (lang=="ru" ) { %>
+              <img src="../assets/kitty.gif" alt="Анимированное изображение мультяшной кошечки">
+              <% } else { %>
+                <img src="../assets/kitty.gif" alt="Animated image of cartoon kitty">
+                <% } %>
+          </div>
+          <% if (lang=="ru" ) { %>
+            <a href="cute-en.html" class="language">ENG</a>
+            <% } else { %>
+              <a href="cute.html" class="language">RU</a>
+              <% } %>
   </header>
 
-  <div class="image-container"></div>
-
-  <main>
-    <%- include('./parts/contents.ejs', {lang: lang, isIndex: false}); %>
-    <div class="divider"></div>
-
-    <h2 id="about-me">
-      <% if(lang==="ru") { %>
-      О себе
+  <nav class="menu-wrapper">
+    <% if(lang==="ru" ) { %>
+      <button class="menu-button" id="menu-closer"><img src="/assets/cute-close.png" alt="Закрыть меню" height="30"
+          width="30"></button>
+      <ul class="menu">
+        <li class="menu-item"><a href="#about-me" class="menu-link">О себе</a></li>
+        <li class="menu-item"><a href="#i-love" class="menu-link">Я люблю...</a></li>
+        <li class="menu-item"><a href="#hard-skills" class="menu-link">Hard skills</a></li>
+        <li class="menu-item"><a href="#soft-skills" class="menu-link">Soft skills</a></li>
+        <li class="menu-item"><a href="#my-projects" class="menu-link">Мои проекты</a></li>
+        <li class="menu-item"><a href="#mockups" class="menu-link">Сайты, свёрстанные по чужим макетам</a></li>
+        <li class="menu-item"><a href="#gallery" class="menu-link">Галерея изображений со мной</a></li>
+        <li class="menu-item"><a href="#copyright" class="menu-link">Ссылки на авторов стороннего контента</a></li>
+        <li class="menu-item"><a href="/" class="menu-link">На главную</a></li>
+      </ul>
       <% } else { %>
-      About me
-      <% } %>
+        <button class="menu-button" id="menu-closer"><img src="/assets/cute-close.png" alt="Close menu" height="30"
+            width="30"></button>
+        <ul>
+          <li class="menu-item"><a href="#about-me" class="menu-link">About me</a></li>
+          <li class="menu-item"><a href="#i-love" class="menu-link">I love...</a></li>
+          <li class="menu-item"><a href="#hard-skills" class="menu-link">Hard skills</a></li>
+          <li class="menu-item"><a href="#soft-skills" class="menu-link">Soft skills</a></li>
+          <li class="menu-item"><a href="#my-projects" class="menu-link">My projects</a></li>
+          <li class="menu-item"><a href="#mockups" class="menu-link">Website that were created with using others'
+              mockups</a></li>
+          <li class="menu-item"><a href="#gallery" class="menu-link">Gallery</a></li>
+          <li class="menu-item"><a href="#copyright" class="menu-link">Copyright</a></li>
+          <li class="menu-item"><a href="/" class="menu-link">Back to homepage</a></li>
+        </ul>
+        <% } %>
+  </nav>
+  <div class="menu-backdrop"></div>
+  <div class="image-container"></div>
+  <main>
+    <h2 id="about-me">
+      <% if(lang==="ru" ) { %>
+        О себе
+        <% } else { %>
+          About me
+          <% } %>
     </h2>
 
     <%- include('./parts/about-me.ejs', {lang: lang, isIndex: false}); %>
 
-    <div class="divider"></div>
+      <div class="divider"></div>
 
-    <h2 id="i-love">
-      <% if(lang==="ru") { %>
-      Я люблю...
-      <% } else{ %>
-      I love...
-      <% } %>
-    </h2>
+      <h2 id="i-love">
+        <% if(lang==="ru" ) { %>
+          Я люблю...
+          <% } else{ %>
+            I love...
+            <% } %>
+      </h2>
 
-    <% if(lang==="ru") { %>
-    <ul>
-      <li>Котиков <span aria-hidden="true"><img class="preference-image" src="../assets/cats.gif"></span></li>
-      <li>Рисовать <span aria-hidden="true"><img class="preference-image" src="../assets/draw.gif"></span></li>
-      <li>Вкусно поесть <span aria-hidden="true"><img class="preference-image" src="../assets/tasty-food.gif"></span></li>
-      <li>Музыку 80-х <span aria-hidden="true"><img class="preference-image" src="../assets/music.gif"></span></li>
-      <li>Игры-одевалки <span aria-hidden="true"><img class="preference-image" src="../assets/dress-up.gif"></span></li>
-    </ul>
-    <% } else { %>
-    <ul>
-      <li>Cats <span aria-hidden="true"><img class="preference-image" class="preference-image" src="../assets/cats.gif"></span></li>
-      <li>Drawing <span aria-hidden="true"><img class="preference-image" src="../assets/draw.gif"></span></li>
-      <li>Tasty food <span aria-hidden="true"><img class="preference-image" src="../assets/tasty-food.gif"></span></li>
-      <li>80s music <span aria-hidden="true"><img class="preference-image" src="../assets/music.gif"></span></li>
-      <li>Dress-up games <span aria-hidden="true"><img class="preference-image" src="../assets/dress-up.gif"></span></li>
-    </ul>
-
-    <% } %>
-
-    <div class="divider"></div>
-
-    <h2 id="hard-skills">Hard Skills</h2>
-    <%- include('./parts/hard-skills.ejs', {lang: lang}); %>
-
-    <div class="divider"></div>
-
-    <h2 id="soft-skills">Soft Skills</h2>
-    <%- include('./parts/soft-skills.ejs', {lang: lang}); %>
-
-    <div class="divider"></div>
-
-    <h2 id="my-projects">
-      <% if (lang === "ru") { %>
-      Мои проекты
-      <% } else { %>
-      My projects (all only in Russian)
-      <% } %>
-    </h2>
-
-    <%- include('./parts/my-projects.ejs', {lang: lang}); %>
-
-    <div class="divider"></div>
-
-    <h2 id="mockups">
-      <% if (lang === "ru") { %>
-      Сайты, свёрстанные по чужим макетам
-      <% } else { %>
-      Website that were created with using others' mockups
-      <% } %>
-    </h2>
-
-    <%- include('./parts/mockups.ejs', {lang: lang}); %>
-
-
-    <div class="divider"></div>
-
-    <h2 id="gallery">Галерея</h2>
-    <div class="gallery-carousel">
-      <button id="previous"></button>
-
-      <%- include('./parts/gallery.ejs', {lang: lang}); %>
-
-      <button id="next"></button>
-      <div class="description">
-        <% if (lang === "ru") { %>
-        Я в Большом театре
+      <% if(lang==="ru" ) { %>
+        <ul>
+          <li class="i-love-item">Котиков <span aria-hidden="true"><img class="preference-image"
+                src="../assets/cats.gif"></span></li>
+          <li class="i-love-item">Рисовать <span aria-hidden="true"><img class="preference-image"
+                src="../assets/draw.gif"></span></li>
+          <li class="i-love-item">Вкусно поесть <span aria-hidden="true"><img class="preference-image"
+                src="../assets/tasty-food.gif"></span></li>
+          <li class="i-love-item">Музыку 80-х <span aria-hidden="true"><img class="preference-image"
+                src="../assets/music.gif"></span></li>
+          <li class="i-love-item">Игры-одевалки <span aria-hidden="true"><img class="preference-image"
+                src="../assets/dress-up.gif"></span>
+          </li>
+        </ul>
         <% } else { %>
-        Me in Bolshoi Theatre
-        <% } %>
-      </div>
-    </div>
+          <ul>
+            <li class="i-love-item">Cats <span aria-hidden="true"><img class="preference-image" class="preference-image"
+                  src="../assets/cats.gif"></span></li>
+            <li class="i-love-item">Drawing <span aria-hidden="true"><img class="preference-image"
+                  src="../assets/draw.gif"></span></li>
+            <li class="i-love-item">Tasty food <span aria-hidden="true"><img class="preference-image"
+                  src="../assets/tasty-food.gif"></span>
+            </li>
+            <li class="i-love-item">80s music <span aria-hidden="true"><img class="preference-image"
+                  src="../assets/music.gif"></span></li>
+            <li class="i-love-item">Dress-up games <span aria-hidden="true"><img class="preference-image"
+                  src="../assets/dress-up.gif"></span></li>
+          </ul>
 
-    <div class="divider"></div>
+          <% } %>
 
-    <% if (lang === "ru") { %>
-    <h2 id="copyright">Ссылки на авторов стороннего контента</h2>
-    <ul>
-      <li><a href="https://pixels.crd.co/#pixels">Ссылка на источник фавикона (это иконка сайта)</a></li>
-      <li><a href=" https://www.flaticon.com/authors/dmitri13">Ссылка на автора иконки в виде стрелочки</a></li>
-      <li><a href="https://ru.pinterest.com/onlinesince2006/">Ссылка на автора картинки, использованной в шапке
-          сайта</a></li>
-      <li><a href="https://pixels.crd.co/#pixels">Ссылка на источник гифок, использованных в шапке сайта</a></li>
-      <li><a href="https://cutekawaiiresources.wordpress.com/2014/08/26/pixel-dividers/">Ссылка на источник
-          разделителя</a></li>
-    </ul>
-    <% } else { %>
-    <li><a href="https://pixels.crd.co/#pixels">Source of favicon</a></li>
-    <li><a href=" https://www.flaticon.com/authors/dmitri13">Source of arrow icon</a></li>
-    <li><a href="https://ru.pinterest.com/onlinesince2006/">Author of image used in top of the site</a></li>
-    <li><a href="https://pixels.crd.co/#pixels">Source of gifs used in header</a></li>
-    <li><a href="https://cutekawaiiresources.wordpress.com/2014/08/26/pixel-dividers/">Source of divider with
-        bows</a></li>
-    <% } %>
+            <div class="divider"></div>
+
+            <h2 id="hard-skills">Hard Skills</h2>
+            <%- include('./parts/hard-skills.ejs', {lang: lang}); %>
+
+              <div class="divider"></div>
+              <%- include('./parts/soft-skills.ejs', {lang: lang}); %>
+
+                <div class="divider"></div>
+
+                <h2 id="my-projects">
+                  <% if (lang==="ru" ) { %>
+                    Мои проекты
+                    <% } else { %>
+                      My projects (all only in Russian)
+                      <% } %>
+                </h2>
+
+                <%- include('./parts/my-projects.ejs', {lang: lang, isCute: true}); %>
+
+                  <div class="divider"></div>
+
+                  <h2 id="mockups">
+                    <% if (lang==="ru" ) { %>
+                      Сайты, свёрстанные по чужим макетам
+                      <% } else { %>
+                        Website that were created with using others' mockups
+                        <% } %>
+                  </h2>
+
+                  <%- include('./parts/mockups.ejs', {lang: lang, isCute: true}); %>
+
+
+                    <div class="divider"></div>
+
+                    <h2 id="gallery">Галерея</h2>
+                    <div class="gallery-carousel">
+
+                      <%- include('./parts/gallery.ejs', {lang: lang, isCute: true}); %>
+
+                        <div class="description">
+                          <% if (lang==="ru" ) { %>
+                            Я в Большом театре
+                            <% } else { %>
+                              Me in Bolshoi Theatre
+                              <% } %>
+                        </div>
+                        <div class="buttons-panel">
+                          <button id="gallery-prev" class="prev-button">
+                            <% if (lang==="ru" ) { %>
+                              <img src="/assets/cute-chevron.png" alt="Предыдущая картинка" height="20" width="20">
+                              <% } else { %>
+                                <img src="/assets/cute-chevron.png" alt="Previous picture" height="20" width="20">
+                                <% } %>
+                          </button>
+                          <button id="gallery-next" class="next-button">
+                            <% if (lang==="ru" ) { %>
+                              <img src="/assets/cute-chevron.png" alt="Следующая картинка" height="20" width="20">
+                              <% } else { %>
+                                <img src="/assets/cute-chevron.png" alt="Next picture" height="20" width="20">
+                                <% } %>
+                          </button>
+                          </button>
+                        </div>
+                    </div>
   </main>
 
   <%- include('./parts/footer.ejs', {lang: lang}); %>

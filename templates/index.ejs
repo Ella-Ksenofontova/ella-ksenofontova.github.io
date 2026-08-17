@@ -4,10 +4,10 @@
 <head>
   <title>
     <% if(lang==="ru" ){ %>
-    Сайт-портфолио Эллы Ксенофонтовой
-    <% } else{ %>
-    Online Portfolio of Ella Ksenofontova
-    <% } %>
+      Сайт-портфолио Эллы Ксенофонтовой
+      <% } else{ %>
+        Online Portfolio of Ella Ksenofontova
+        <% } %>
   </title>
   <link rel="stylesheet" href="../css/sitestyle.css">
   <meta charset="utf-8">
@@ -15,142 +15,160 @@
   <link rel="icon" href="../assets/girl_power.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <header>
 
     <% if(lang==="ru" ){ %>
-    <h1 class="site-name">Элла Ксенофонтова</h1>
-    <a href="en-version.html" class="language">ENG</a>
-    <% } else{ %>
-    <h1 class="site-name">Ella Ksenofontova's site </h1>
-    <a href="index.html" class="language">RU</a>
-    <% } %>
+      <button class="menu-button" id="menu-opener">
+        <div class="menu-stripe"></div>
+        <div class="visually-hidden">Открыть меню</div>
+      </button>
+      <nav class="menu" id="menu">
+        <button class="menu-button" id="menu-closer"><img src="/assets/close.png" alt="Закрыть меню"
+            class="close-menu-icon"></button>
+        <ul class="menu-list">
+          <li class="menu-item"><a href="#about-me">Обо мне</a></li>
+          <li class="menu-item"><a href="#i-love">Я люблю...</a></li>
+          <li class="menu-item"><a href="#hard-skills">Hard skills</a></li>
+          <li class="menu-item"><a href="#soft-skills">Soft skills</a></li>
+          <li class="menu-item"><a href="#my-projects">Мои проекты</a></li>
+          <li class="menu-item"><a href="#mockups">Сайты, свёрстанные по чужим макетам</a></li>
+          <li class="menu-item"><a href="#other-versions">Другие версии сайта</a></li>
+          <li class="menu-item"><a href="#gallery">Галерея</a></li>
+          <li class="menu-item"><a href="#copyright">Ссылки на авторов стороннего контента</a></li>
+        </ul>
+      </nav>
+      <div class="menu-backdrop"></div>
+      <a href="en-version.html" class="language">ENG</a>
+      <% } else{ %>
+        <button class="menu-button" id="menu-opener">
+          <div class="menu-stripe"></div>
+        </button>
+        <nav class="menu" id="menu">
+          <ul class="menu-list">
+            <button class="menu-button" id="menu-closer"><img src="/assets/close.png" alt="Закрыть меню"
+                class="close-menu-icon"></button>
+            <li class="menu-item"><a href="#about-me">About me</a></li>
+            <li class="menu-item"><a href="#i-love">I love...</a></li>
+            <li class="menu-item"><a href="#hard-skills">Hard skills</a></li>
+            <li class="menu-item"><a href="#soft-skills">Soft skills</a></li>
+            <li class="menu-item"><a href="#my-projects">My projects</a></li>
+            <li class="menu-item"><a href="#mockups">Website that were created using others' mockups</a></li>
+            <li class="menu-item"><a href="#other-versions">Other versions of website</a></li>
+            <li class="menu-item"><a href="#gallery">Gallery</a></li>
+            <li class="menu-item"><a href="#copyright">Copyright</a></li>
+          </ul>
+        </nav>
+        <div class="menu-backdrop"></div>
+        <a href="index.html" class="language">RU</a>
+        <% } %>
   </header>
 
-  <div class="image-container"></div>
+  <section class="hero-section">
+    <h1 class="hero-title animated" data-delay="250">
+      <% if(lang==="ru" ){ %>
+        Привет, я Элла Ксенофонтова.
+        <% } else{ %>
+          Hello, I'm Ella Ksenofontova.
+          <% } %>
+    </h1>
+    <img src="/assets/hero-image.png" class="hero-img animated" data-delay="500" alt="">
+  </section>
 
   <main>
-    <%- include('./parts/contents.ejs', {lang: lang, isIndex: true}); %>
-
-    <h2 id="about-me">
+    <h2 id="about-me" class="animated" data-delay="250">
       <% if(lang==="ru" ){ %>
-      О себе
-      <% } else{ %>
-      About me
-      <% } %>
+        О себе
+        <% } else{ %>
+          About me
+          <% } %>
     </h2>
 
     <%- include('./parts/about-me.ejs', {lang: lang, isIndex: true}); %>
 
-    <h2 id="i-love">
-      <% if(lang==="ru" ){ %>
-      Я люблю...
-      <% } else{ %>
-      I love...
-      <% } %>
-    </h2>
+      <h2 id="i-love" class="animated" data-delay="250">
+        <% if(lang==="ru" ){ %>
+          Я люблю...
+          <% } else{ %>
+            I love...
+            <% } %>
+      </h2>
 
-    <% if(lang==="ru") { %>
-    <ul>
-      <li>Котиков <span aria-hidden="true">😺</span></li>
-      <li>Рисовать <span aria-hidden="true">🎨</span></li>
-      <li>Вкусно поесть <span aria-hidden="true">🍕</span></li>
-      <li>Музыку 80-х <span aria-hidden="true">🎧</span></li>
-      <li>Игры-одевалки <span aria-hidden="true">🎮</span></li>
-    </ul>
-    <% } else { %>
-    <ul>
-      <li>Cats <span aria-hidden="true">😺</span></li>
-      <li>Drawing <span aria-hidden="true">🎨</span></li>
-      <li>Tasty food <span aria-hidden="true">🍕</span></li>
-      <li>80s music <span aria-hidden="true">🎧</span></li>
-      <li>Dress-up games <span aria-hidden="true">🎮</span></li>
-    </ul>
+      <%- include('./parts/i-love.ejs', {lang: lang, isIndex: true}); %>
 
-    <% } %>
 
-    <h2 id="hard-skills">Hard Skills</h2>
-    <%- include('./parts/hard-skills.ejs', {lang: lang}); %>
+        <h2 id="hard-skills" class="animated" data-delay="250">Hard Skills</h2>
+        <%- include('./parts/hard-skills.ejs', {lang: lang}); %>
 
-    <h2 id="soft-skills">Soft Skills</h2>
-    <%- include('./parts/soft-skills.ejs', {lang: lang}); %>
+          <%- include('./parts/soft-skills.ejs', {lang: lang}); %>
 
-    <h2 id="my-projects">
-      <% if (lang === "ru") { %>
-      Мои проекты
-      <% } else { %>
-      My projects (all only in Russian)
-      <% } %>
-    </h2>
+            <h2 id="my-projects" class="animated" data-delay="250">
+              <% if (lang==="ru" ) { %>
+                Мои проекты
+                <% } else { %>
+                  My projects (all only in Russian)
+                  <% } %>
+            </h2>
 
-    <%- include('./parts/my-projects.ejs', {lang: lang}); %>
+            <%- include('./parts/my-projects.ejs', {lang: lang, isCute: false}); %>
 
-    <h2 id="mockups">
-      <% if (lang === "ru") { %>
-      Сайты, свёрстанные по чужим макетам
-      <% } else { %>
-      Website that were created with using others' mockups
-      <% } %>
-    </h2>
+              <h2 id="mockups" class="animated" data-delay="250">
+                <% if (lang==="ru" ) { %>
+                  Сайты, свёрстанные по чужим макетам
+                  <% } else { %>
+                    Website that were created with using others' mockups
+                    <% } %>
+              </h2>
 
-    <%- include('./parts/mockups.ejs', {lang: lang}); %>
+              <%- include('./parts/mockups.ejs', {lang: lang, isCute: false}); %>
 
-    <% if (lang === "ru") { %>
-    <h2 id="other-versions">Другие версии сайта</h2>
-    <h3><a href="./old-web.html">Old Web</a></h3>
-    <h3><a href="./cute.html">Милый стиль</a></h3>
-    <% } else {%>
-    <h2 id="other-versions">Other versions of website</h2>
-    <h3><a href="./old-web-en.html">Old Web</a></h3>
-    <h3><a href="./cute-en.html">Cute style</a></h3>
-    <% } %>
+                <% if (lang==="ru" ) { %>
+                  <h2 id="other-versions" class="animated" data-delay="250">Другие версии сайта</h2>
+                  <h3 class="animated" data-delay="500"><a href="./old-web.html">Old Web</a></h3>
+                  <h3 class="animated" data-delay="750"><a href="./cute.html">Милый стиль</a></h3>
+                  <% } else {%>
+                    <h2 id="other-versions" class="animated" data-delay="250">Other versions of website</h2>
+                    <h3 class="animated" data-delay="500"><a href="./old-web-en.html">Old Web</a></h3>
+                    <h3 class="animated" data-delay="750"><a href="./cute-en.html">Cute style</a></h3>
+                    <% } %>
 
-    <h2 id="gallery">
-      <% if (lang === "ru") { %>
-      Галерея изображений со мной
-      <% } else { %>
-      Gallery
-      <% } %>
-    </h2>
+                      <h2 id="gallery" class="animated" data-delay="250">
+                        <% if (lang==="ru" ) { %>
+                          Галерея изображений со мной
+                          <% } else { %>
+                            Gallery
+                            <% } %>
+                      </h2>
 
-    <div class="gallery-carousel">
-      <button id="previous"></button>
+                      <div class="gallery-carousel animated" data-delay="500">
+                        <%- include('./parts/gallery.ejs', {lang: lang}); %>
 
-      <%- include('./parts/gallery.ejs', {lang: lang}); %>
-
-      <button id="next"></button>
-      <div class="description">
-        <% if (lang === "ru") { %>
-        Я в Большом театре
-        <% } else { %>
-        Me in Bolshoi Theatre
-        <% } %>
-      </div>
-    </div>
-    <% if (lang === "ru") { %>
-    <h2 id="copyright">Ссылки на авторов стороннего контента</h2>
-    <ul>
-      <li><a href="https://www.flaticon.com/authors/freepik">Ссылка на автора фавикона (это иконка сайта)</a></li>
-      <li><a href="https://storytale.io/">Ссылка на источник картинки, используемой на странице 404</a></li>
-      <li><a href="https://www.flaticon.com/authors/triangle-squad">Ссылка на автора фавикона страницы 404</a>
-      </li>
-      <li><a href=" https://www.flaticon.com/authors/dmitri13">Ссылка на автора иконки в виде стрелочки</a></li>
-      <li><a href="https://www.freepik.com/author/freepik">Ссылка на автора картинки, использованной в шапке
-          сайта</a></li>
-    </ul>
-    <% } else { %>
-    <h2 id="copyright">Copyright</h2>
-    <ul>
-      <li><a href="https://www.flaticon.com/authors/freepik">Author of favicon</a></li>
-      <li><a href="https://storytale.io/">Author of image used in 404 page</a></li>
-      <li><a href="https://www.flaticon.com/authors/triangle-squad">Author of 404 page favicon</a></li>
-      <li><a href=" https://www.flaticon.com/authors/dmitri13">Author of arrow icon</a></li>
-      <li><a href="https://www.freepik.com/author/freepik">Author of image used in header</a></li>
-    </ul>
-    <% } %>
+                          <div class="description">
+                            <% if (lang==="ru" ) { %>
+                              Я в Большом театре
+                              <% } else { %>
+                                Me in Bolshoi Theatre
+                                <% } %>
+                          </div>
+                          <div class="buttons-panel">
+                            <% if (lang==="ru" ) { %>
+                              <button id="gallery-prev" class="prev-button"><img src="/assets/prev-next.png"
+                                  alt="Предыдущая карточка" height="20" width="20"></button>
+                              <button id="gallery-next" class="next-button"><img src="/assets/prev-next.png"
+                                  alt="Следующая карточка" height="20" width="20"></button>
+                              <% } else { %>
+                                <button id="gallery-prev" class="prev-button"><img src="/assets/prev-next.png"
+                                    alt="Previous card" height="20" width="20"></button>
+                                <button id="gallery-next" class="next-button"><img src="/assets/prev-next.png"
+                                    alt="Next card" height="20" width="20"></button>
+                                <% } %>
+                          </div>
+                      </div>
   </main>
 
   <%- include('./parts/footer.ejs', {lang: lang}); %>
